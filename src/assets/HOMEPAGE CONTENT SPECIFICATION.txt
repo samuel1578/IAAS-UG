@@ -1,0 +1,187 @@
+HOMEPAGE CONTENT SPECIFICATION
+
+Use the following content to populate each section of the Landing Page.
+
+---
+
+HERO SECTION
+
+Title:
+UG School of Agriculture Student Hub
+
+Subtitle:
+A digital gateway connecting agriculture students to academic resources, farm facilities, community knowledge, and career opportunities.
+
+Short Description:
+The Student Hub is designed to support every stage of the agricultural journey at the University of Ghana. From first-year survival guides to internship tracking and farm resources, this platform brings together the tools, knowledge, and community students need to succeed.
+
+Primary Buttons:
+• Explore Resources
+• View Academic Tools
+• Join the Student Community
+
+Background Theme:
+Modern agriculture innovation, student collaboration, and sustainable farming.
+
+---
+
+GROWTH STAGE CARDS
+
+L100 – Seedling Stage
+Title:
+Seedling Stage (Level 100)
+
+Description:
+Begin your journey in agricultural sciences. Discover survival guides, introductory resources, and essential study tools designed to help first-year students adapt to university life and agricultural studies.
+
+Key Tools:
+• First-Year Survival Guide
+• Introductory Course Resources
+• Study Tips for Agric Students
+• Orientation Materials
+
+L200 – Vegetative Stage
+Title:
+Vegetative Stage (Level 200)
+
+Description:
+Build a strong academic foundation. Access course materials, past examination questions, and collaborative study tools designed to strengthen your understanding of agricultural systems and practices.
+
+Key Tools:
+• Past Questions Vault
+• Course Study Resources
+• Group Study Materials
+• Practical Preparation Guides
+
+L300 – Branching Stage
+Title:
+Branching Stage (Level 300)
+
+Description:
+Explore specialization pathways and develop professional skills. Learn about different departments within the School of Agriculture and prepare for advanced coursework and research opportunities.
+
+Key Tools:
+• Department Major Selection
+• Research Preparation Resources
+• Career Guidance
+• Academic Project Support
+
+L400 – Harvest Stage
+Title:
+Harvest Stage (Level 400)
+
+Description:
+Prepare for life after graduation. Track internships, prepare for final projects, and explore career pathways in agriculture, agribusiness, and research.
+
+Key Tools:
+• Internship Tracker
+• Final Year Project Support
+• CV and Career Resources
+• Industry Opportunities
+
+---
+
+QUICK TOOLS SECTION
+
+Section Title:
+Quick Access Tools
+
+Section Description:
+Access essential student tools quickly and efficiently.
+
+Tools:
+
+Past Questions
+Browse and download past examination questions organized by course code and academic year.
+
+Campus Farm Map
+Explore an interactive map of agricultural facilities including crop farms, animal farms, greenhouses, and laboratories.
+
+Academic Timetable
+Stay updated with lecture schedules, practical sessions, and timetable changes.
+
+Farm Weather Monitor
+View real-time weather conditions to support agricultural fieldwork and farm practical activities.
+
+---
+
+STUDENT HIGHLIGHTS
+
+Section Title:
+Student Highlights
+
+Section Description:
+Discover what fellow agriculture students are learning, building, and experimenting with across the school.
+
+Posts:
+
+Post 1
+Student: Kofi Mensah (Level 200)
+Message:
+Tested organic fertilizer on maize crops during today's farm practical. The growth difference after two weeks is impressive.
+
+Post 2
+Student: Ama Owusu (Level 100)
+Message:
+Looking for study partners for AGRC 103. Anyone interested in forming a small discussion group?
+
+Post 3
+Student: Kwame Asante (Level 300)
+Message:
+Visited the irrigation research field today. Learning about sustainable water management systems was incredibly insightful.
+
+---
+
+ANNOUNCEMENTS
+
+Section Title:
+Latest Announcements
+
+Section Description:
+Stay informed about important academic updates, field trips, and student events.
+
+Announcements:
+
+Field Trip Announcement
+Title:
+Research Farm Field Visit
+
+Description:
+All Level 200 students are invited to participate in a guided visit to the university research farm to observe modern irrigation techniques and crop management practices.
+
+Date:
+March 22
+
+---
+
+Timetable Update
+Title:
+Crop Science Lecture Schedule Change
+
+Description:
+The Crop Science lecture previously scheduled for Tuesday has been moved to Wednesday at 2:00 PM in Lecture Hall B.
+
+Date:
+March 20
+
+---
+
+Student Meeting
+Title:
+School of Agriculture Student Forum
+
+Description:
+The Agric SRC invites all students to a general meeting to discuss upcoming activities, academic support initiatives, and student welfare.
+
+Date:
+March 28
+
+---
+
+FOOTER MESSAGE
+
+Text:
+Empowering the next generation of agricultural innovators at the University of Ghana School of Agriculture.
+
+Subtext:
+Cultivating knowledge. Growing leaders. Transforming agriculture.

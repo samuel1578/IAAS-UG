@@ -1,0 +1,744 @@
+COMPILED BY: IAAS-UG ACADEMIC COMMITTEE
+
+The School of Agriculture offers a 4-year programme leading to the award of a BSc. Agriculture degree. All courses in the first and second years are core/compulsory and are designed to provide students with foundations in general Science and Agriculture and further consolidate their understanding of the subject. Students in year three shall take two core courses per semester in the area they wish to specialise and two additional core courses from other department(s) within the School. Students have the option to specialise in any of the following areas: Agricultural Economics; Agribusiness; Animal Science; Crop Science; Horticulture; Postharvest Technology and Soil Science in the final year of their programme. For a student to graduate with BSc. Agriculture degree, he/she must have taken a minimum of 146 credits including all University, School and Department required courses, and passed at least 136 credits. The list of courses, their descriptions, codes and credit weighting have been provided below by year. 
+
+Keys
+C = CORE/COMPULSORY    
+E= ELECTIVE
+CCT = CUMULATIVE CREDITS TAKEN(AT THE END OF THAT PERIOD)
+
+
+
+
+LEVEL 100
+All Level 100 students in the School of Agriculture are required to take ALL courses listed below for both first and second semesters.
+
+FIRST SEMESTER
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEN101	Agricultural Engineering I	C	2
+AGRC101	General Chemistry I 	C	3
+ANIM111	Biology of Farm Animals	C	3
+CROP111	Introduction to Agricultural Botany	C	2
+MATH101	General Mathematics	C	3
+SOIL101	Introduction to Soil and the Environment	C	2
+UGRC150/UGRC110	Critical Thinking and Practical Reasoning/Academic Writing I	C	3
+	TOTAL		18
+CCT: 18
+
+
+SECOND SEMESTER
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC112	Introduction to Economics	C	3
+AGEX102	Development Communication and Extension Methods	C	2
+AGRC102	General Chemistry II	C	3
+AGRC104	Introduction to Computer Science	C	2
+AGRC108	General Physics	C	3
+UGRC110/UGRC150	Academic Writing I/Critical Thinking and Practical Reasoning	C	3
+	TOTAL		16
+CCT: 34
+*Students can take UGRC150 or UGRC110 in either semester.  Students who take UGRC150 in Level 100 first semester will be required to take UGRC110 for the second semester, and vice versa.
+
+
+
+
+LEVEL 200
+All Level 200 students in the School of Agriculture are required to take ALL courses listed below for both first and second semesters. 
+FIRST SEMESTER
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC211	Microeconomics: Principles and applications to households and firms	C	2
+AGEN201	Agricultural Engineering II 	C	3
+ANIM211	Introduction to Monogastric Animal Production	C	2
+BCMB205	General Biochemistry	C	3
+CROP221	Introduction to Crop Production	C	3
+SOIL203	Soil Genesis and Characterisation	C	3
+UGRC 220-238*	Introduction to African Studies	C	3
+	TOTAL		19
+CCT: 53
+*Information on UGRCs(Introduction to African Studies) will be provided by the Institute of African Studies. As a second year Agriculture student, you are required to register one, of your preferred choice, in this semester. Do not register for UGRC 110 - you will take CBAS 210 as your Academic Writing II in the second semester.
+
+SECOND SEMESTER
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC212	Microeconomics: Principles and Applications to Households and Firms	C	3
+AGEX206	Approaches to Extension	C	3
+AGRC200	Long Vacation Practicals	C	3
+AGRC212	Introductory Statistics	C	3
+ANIM212	Elements of Microbiology and Immunology	C	3
+CBAS210	Academic Writing II	C	3
+CROP222	Insect Biology and Plant Microbes	C	3
+SOIL204	Chemical and Biochemical Properties of Soil	C	3
+	TOTAL		24
+CCT: 77
+
+
+
+
+
+
+LEVEL 300
+Students shall be required to take all the School required courses (AGRCs). Additionally, students shall take TWO courses per semester from the Department of specialisation and TWO courses per semester from other Departments in the School.
+
+FIRST SEMESTER
+General course(s) for all level 300 students irrespective of chosen area of specialization. Students shall register a total number of five courses(15 credits) for the first semester.
+AGRC311	Introductory Genetics	C	3
+
+The additional four courses shall be registered/taken in the following manner: Two courses from the department in which you want to specialize and two courses from other departments within the School of Agriculture. These could be two courses 
+i) from the same department, or ii)from two different departments. Please ensure to take all two courses from the department you want to specialize in for both first and second semesters*.
+
+For the agricultural extension programme, your courses have been preselected and this arrangement does not apply to you.
+
+AGRICULTURAL ECONOMICS AND AGRIBUSINESS SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC311	Farm Management	C	3
+AGEC313	Microeconomic and Macroeconomic Theory	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		15
+
+ANIMAL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+ANIM311	Principles of Animal Nutrition	C	3
+FISH333	Principles of Aquaculture	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		15
+
+CROP SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+CROP311	Crop Protection	C	3
+CROP315	Principles of Horticulture	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		15
+
+SOIL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+SOIL307	Environmental Soil Physics I	C	3
+SOIL309	Soil Research Methodology And Laboratory Analysis	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		15
+
+
+
+AGRICULTURAL EXTENSION SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEX311	Development Sociology	C	3
+AGEX313	Gender Planning and Development	C	3
+AGEC311	Farm Management	C	3
+CROP311	Crop protection	C	3
+	TOTAL		15
+
+CCT : 92
+
+SECOND SEMESTER
+General course(s) for all level 300 students irrespective of chosen area of specialization. Students shall register a total number of six courses(18 credits) for the second semester.
+AGRC312	Principles of Biotechnology	C	3
+AGEX312	Extension Programme Planning and Evaluation	C	3
+	TOTAL		6
+
+AGRICULTURAL ECONOMICS AND AGRIBUSINESS SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC312	Project Analysis	C	3
+AGEC314	Research Methods, Statistics and Mathematics for Economics and Business	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		18
+
+
+ANIMAL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+ANIM312	Introduction to Ruminant Production	C	3
+ANIM314	Principles of Animal Breeding	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		18
+
+CROP SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+CROP322	Crop Physiology	C	3
+FAPH304	Introduction to Postharvest Technology and Crop Losses 	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		18
+
+SOIL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+SOIL306	Management of Soil Environment	C	3
+SOIL308	Soil degradation and Rehabilitation	C	3
+*** & ***	Two Electives from other Departments within SOA	E	6 (3 each)
+	TOTAL		18
+
+AGRICULTURAL EXTENSION SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEX314	FBO Development and Management	C	3
+AGEX316	Climate Change and Adaptation in Agricultural Development	C	3
+AGEC314	Research Methods, Statistics & Mathematics for Economists Business	C	3
+FAPH304	Introduction to Postharvest Technology and Crop Losses	C	3
+	TOTAL		18
+
+CCT: 110
+
+
+
+
+
+LEVEL 400
+Students shall be required to take all School required courses(AGRCs). Additionally, students shall select one of the EIGHT subject areas listed under Specialisations and take all the CORE courses listed and some other electives.
+
+FIRST SEMESTER
+General course(s) for all level 400 students irrespective of chosen area of specialization. Students shall register a total number of SIX courses(18/19 credits) for the first semester.
+AGRC411	Entrepreneurial Skills	C	3
+*Please do not register AGRC 401
+
+
+AGRICULTURAL ECONOMICS SPECIALISATION.
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC400	Research Project	C	6
+AGEC419	Agricultural Marketing and Price Analysis	E	3
+ECON443	Econometrics I	C	3
+ECON311	Microeconomic Theory I 	C	3
+ECON313	Macroeconomic Theory I	C	3
+	TOTAL		21
+
+AGRIBUSINESS SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEC400	Research Project	C	6
+AGEC413	 Agribusiness Management	C	3
+AGEC415	Quantitative Methods and Operations Research	C	3
+AGEC417	Management Accounting	E	3
+AGEC411	Agricultural Marketing and Research	C	3
+	TOTAL		21
+
+ANIMAL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+ANIM413	Biometry	C	3
+ANIM415	Applied Animal Nutrition	C	3
+ANIM417	Monogastric Animal Production	C	3
+ANIM419/ANIM 421/ANIM 423	*Select One Elective from ANIM 419, ANIM 421, ANIM 423	E	3
+	TOTAL		15
+*ANIM 419 = Meat Science & Technology (3 credits), ANIM 421 = Principles of Range and Forage Science (3 credits), ANIM 423 = Micro-Livestock Production (3 credits)
+
+
+CROP SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+CROP440	Research Project	C	6
+CROP411	Field Crops	C	3
+CROP423	Plant Pathology	C	3
+CROP425	Statistics for Agriculturist	C	3
+CROP427/CROP433
+	*Select One Elective from CROP 427 and CROP 433	E	3
+	TOTAL		21
+*CROP 427 = Seed Science and Technology (3 credits), CROP 433 = Molecular Biology (3 credits)
+
+HORTICULTURE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+CROP 440	Research Project	C	6
+CROP425	Statistics for Agriculturist	C	3
+CROP435	Environmental Horticulture	C	3
+CROP437	Pest and Diseases of Horticultural Crops	C	3
+CROP411/FAPH421	*Select One Elective from CROP 411 and FAPH 421	E	3
+	TOTAL		21
+*CROP 411 = Field Crop (3 credits), FAPH 421 = Postharvest Physiology (3 credits)
+
+POST HARVEST TECHNOLOGY SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+CROP440	Research Project	C	6
+CROP425	Statistics for Agriculturist	C	3
+FAPH421	Postharvest Physiology	C	3
+FAPH413	Storage, Pest and Diseases: their prevention and control	C	3
+FAPH415/FAPH417
+	*Select One Elective from FAPH 415 and FAPH 417	E	3
+	TOTAL		21
+*FAPH 415 = Packaging and Environmental Issues in Postharvest (3 credits), FAPH 417 = Quality Assurance in Postharvest Technology (3 credits)
+
+SOIL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+SOIL400	Research Project and Seminar	C	6
+SOIL411 	Soil Genesis, Quality and Land-use Planning	C	3
+SOIL413	Environmental Soil Physics II 	C	3
+CROP425	Statistics for Agriculturist	C	3
+SOIL415/SOIL419
+	*Select One Elective from SOIL 415 and SOIL 419	E	3
+	TOTAL		21
+*SOIL 415 = Clay and Soil Material Science (3 credits), SOIL 419 = Introduction to Paleopedology (3 credits)
+
+AGRICULTURAL EXTENSION SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEX411	Theoretical Foundation of Innovation in Development work	C	3
+AGEX413	Rural Livelihoods and Food Security 	C	3
+AGEX415	NGO Development and Management	C	3
+ANIM417***	*Elective to be selected from any Department in the School	E	3
+	TOTAL		15
+
+CCT: 131
+
+
+
+SECOND SEMESTER
+
+AGRICULTURAL ECONOMICS SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+ECON312	Microeconomic Theory II	C	3
+ECON314	Macroeconomic Theory II	C	3
+ECON444	Econometrics II	E	3
+	TOTAL		15
+
+AGRIBUSINESS SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+AGEC414	Fundamentals of Business Planning and Policy	C	3
+AGEC412	Agrifood Businesses and Agro Processing	E	3
+AGEC416	Managerial and Business Economics	E	3
+	TOTAL		15
+
+
+ANIMAL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+ANIM410	Research Project	C	6
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+ANIM414	Applied Animal Breeding	C	3
+ANIM416	Ruminant Animal Production	C	3
+ANIM418/ANIM422
+	*Select one Elective from ANIM 418, ANIM 422	E	3
+	TOTAL		21
+*ANIM 418 = Animal Health and Physiology (3 credits), ANIM 422 = Anatomy of Digestive Physiology (3 credits)
+
+
+CROP SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+CROP422 	Crop Entomology	C	3
+CROP426	Genetics and Plant Bleeding	C	3
+CROP434/CROP418/CROP424	*Select One Elective from CROP 434, CROP 418 and CROP 424	E	3
+	TOTAL		15
+*CROP 434 = Fruit and Vegetable Crops (3credits), CROP 418 = Plantation and Industrial Crops (3credits), CROP 424 = Plant Virology (3credits)
+
+HORTICULTURE SPECIALISATION 
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC 422	Introductory Agroforestry	C	3
+AGEX 412	Management of Development Organisations	C	3
+CROP 434	Fruit and Vegetable Crops	C	3
+CROP 426	Genetics and Plant Bleeding	C	3
+CROP 418	Plantation and Industrial Crops	E	3
+	TOTAL		15
+
+POST HARVEST TECHNOLOGY SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC 422	Introductory Agroforestry	C	3
+AGEX 412	Management of Development Organisations	C	3
+CROP 434	Fruit and Vegetable Crops	C	3
+FAPH 424	Processing and Preservation of Agricultural Produce	C	3
+FAPH422/FAPH426/ FAPH418	*Select One Elective from FAPH 422, FAPH 426, and FAPH 418	E	3
+	TOTAL		15
+*FAPH 422 = Farm Structures and Environmental Control (3 credits), FAPH 426 = Marketing of Agric. Produce, Food Laws and Legislation (3 credits), FAPH 418 = Micro Enterprise Development and Management (3 credits)
+
+SOIL SCIENCE SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+SOIL412	Soil Biochemistry and Microbiology	C	3
+SOIL414	Soil Chemistry and Fertility	C	3
+SOIL416/SOIL418
+	Select One Elective from SOIL 416 and SOIL 418*	E	3
+	TOTAL		15
+*SOIL 416 = Remediation of Contaminated Soils (3 credits), SOIL 418 = Introduction to Agricultural Systems & Analysis Simulation (3 credits)
+
+AGRICULTURAL EXTENSION SPECIALISATION
+COURSE CODE	COURSE TITLE	TYPE	CREDIT
+AGEX410	Research Project	C	6
+AGRC422	Introductory Agroforestry	C	3
+AGEX412	Management of Development Organisations	C	3
+AGEX414	Sustainable Agricultural Value Chain Development	C	3
+AGEX418	Use of ICTs in Agriculture	C	3
+AGEX416	Human Resource for Development Organizations	E	3
+	TOTAL		21
+
+CCT: 146
+ 
+
+
+
+COURSE DESCRIPTIONS
+
+LEVEL 100 COURSES 
+
+AGRC 101: General Chemistry I 
+Theory: Dimensional analysis and units in chemistry, Equilibrium in aqueous solutions; Arrhenius, Bronsted and Lewis concepts, Acid strengths and ion pairs, simple pH calculations for solutions of acids and bases, principle of pH determinations, cation and anion hydrolysis.
+Practicals: Quantitative analysis. Routine laboratory procedures; Significant figures; Accuracy and precision; Weighing; Calibration of volumetric glassware; Solution preparation; Standardization of solutions; Acid base titration; Determination of pH of solutions and suspensions.
+
+AGEN 101: Agriculture Engineering I 
+Importance and strategies of post harvest crop handling in agriculture. Postharvest physiology of farm produce; influence of production practices and technology-Harvest, handling and processing of agricultural produce traditional and modern technologies). Cleaning and sorting equipment. Different types of conveyors, transportation, size-reduction mills. Milling of grains. Influence of crop variable, mill design, separation and cleaning of grain, grain properties aerodynamic drag, friction resilience. Drying equipment principles and practice: Driers, solar driers. Storage methods and structures. Pest management, for storage; food processing and preservation of major types of food products. Hydrologic cycle; role of water in crop growth, concepts of soil water availability; irrigation water requirement, scheduling, water deficits and crop yields; Irrigation and Drainage - Sources of irrigation water, conveyance of irrigation water, methods of irrigation, calculating water requirement, comparison of irrigation systems for various drainage systems, crop water requirement, evapotranspiration and crop coefficient curve. Drainage problems, surface and sub-surface methods of drainage. 
+
+ANIM 111: Biology of Farm Animals 
+Blood and circulation: - composition of blood, functions of blood, heart and blood vessels; the respiratory system: - structure of the respiratory system of mammalian and avian species, gaseous exchange in the lungs and tissues, transport of oxygen and carbon dioxide; the excretory system: - structure of the kidneys, the functional unit of the kidneys and formation of urine; the reproductive system: - reproductive organs of livestock and avian species, spermatogenesis and cogenesis, endocrine functions of the testes and ovaries; skeletal system of livestock and avian species; the digestive system: - structure and functions of the different sections of the digestive systems of livestock and avian species. 
+
+CROP 111: Introduction to Agricultural Botany 
+Hierarchical organization of plant life, from single cells to flowering plants: algae, fungi, bryophytes, pteridophytes, gymnosperms, angiosperms; structure of plant cells, tissues, organs. Fine cell structures and their functions. Mitosis, meiosis, molecular basis of inheritance, protein synthesis. Root modification of roots, arrangement of tissues in monocotyledonous (monocot) and dicotyledonous (dicot) roots. Stem: modification of stems, arrangement of tissues in monocot and dicot stems. Leaf: simple, compound, venation, shapes, arrangement and modification of leaves; arrangement of tissues in monocot and dicot leaves. Reproduction in plants. Flower: parts, types, floral arrangements (inflorescence), and floral diagrams. Fruit and seed: structure, types germination and dormancy. Principles of classification including concepts of species, genus, family, order, division and kingdom, binomial system of nomenclature.
+
+SOIL 101: Introduction to Soil and the Environment 
+Theory: Pedology (7 weeks): This course introduces students to fundamentals of pedology and soil physics. Topics include; Concepts of soil; composition of the earth-crust and its environment, pedogenic factors, major components of soils; introduction to inorganic components of soils. 
+Soil Physics (6 weeks): Soil as a 3-phase dispersed system. The solid phase: bulk density, particle density, specific surface area, soil texture, Stoke's law and particle size analysis. The liquid phase: soil water content and methods of determination including gravimetric, neutron scattering, time domain reflectometry; concept of equivalent depth and soil water storage. 
+Practicals: (2 weeks): Determination of (a) soil colour, (b) soil texture by feel, (c) soil water content and (d) bulk density. 
+
+MATH 101: General Mathematics 
+Indices and logarithm. Functions and their graphs, polynomial functions, circular functions, equations and inequalities in one variable. Arrangement and selections. Binomial expansion. Limits of functions, the derivatives of functions and its applications. Integration as the inverse of differentiation. Integral of simple functions. The definite integral as an area. Applications to kinematics. Elementary numerical methods, the Newton-Raphson method. 
+
+AGRC 102: General Chemistry II 
+Theory: Chemical equilibrium, solubility and solubility product (Ksp), electrochemical series, Redox systems, Oxidation number; Balancing of redox reactions. Systematic inorganic chemistry; Periodic classification of the elements, periodic Tables (groups and periods), Atomic properties and periodic Table, Chemistry of Alkali and Alkali earth metals, halogens and transition elements, Introduction to organic chemistry: Structure of organic molecules, alkanes and cycloalkanes as hydrocarbons, sp3 functional groups. Alkenes: sp2 hybridization, double bond formation, Aromatic functional groups: Introduction to aromaticity. 
+Practicals: Redox titration. Qualitative Analysis: Test for cations (NH4+, Mg2+, Al3+, Pb2+, Zn2+, Mn2+, Ca2+, Ba2+, Ag+) and test for anions (SO42-, S2-, SO32-, CO32-, Cl-, NO3-); Selective precipitation of cations and anions; Identification of salts and functional groups. Lucas test for primary, secondary and tertiary alcohols.
+
+
+
+
+AGEC 112: Introduction to Economics 
+The objective of the course is to provide beginning students with the basic economic tools that will enable them to appreciate the economic systems of the world and how an economy works. 
+Microeconomics: What is Economics? Scarcity and Choice, Economic Systems of the World, Micro and Macro Economics, Positive and Normative economics, Economics and Agricultural Economics, Techniques of Economics Analysis: Inductive and deductive reasoning, Scientific method of enquiry, theory and hypothesis, use of graphs, Analysis of consumer behavior: Consumer choice, concept of utility, indifference curves, budget lines, consumer equilibrium, Demand Analysis: Demand Schedule, Demand curve, Demand function, change in quantity demanded versus change in demand, Factors affecting the demand of a commodity, Supply Analysis: Supply Schedule, Supply curve, Supply function, change in quantity supplied versus change in supply, Factors affecting the supply of a commodity, Elasticity of Demand and Supply: Concept of elasticity, price elasticity of demand and supply, income elasticity, cross price elasticity, Markets: types of markets, characteristics of markets, equilibrium of competitive markets, Theory of the firm (production economics): concept of short-run and long-run, fixed and variable inputs. Concept of cost, fixed and variable costs. 
+Macroeconomics: Nominal and real values in economics: Consumer Price Index (CPI), GDP deflator, purchasing power, National Income Determination: Gross Domestic Product (GDP),Gross National Product (GNP), consumption function, savings function, the multiplier measurement problems, Inflation: Level of Inflation, rate of inflation, effects of inflation, Unemployment: rate of unemployment, labour force.
+
+AGEX 102: Development Communication and Extension Methods 
+The course aims at exposing students to the concept of communication and extension teaching methods such that they will acquire the knowledge and skills to apply appropriate communication and extension teaching methods for identified clients with specific extension messages. Communication defined: the communication process, Approaches to effective communication, Importance of communication in development work. Individual communication methods: farm and home visits, Group communication methods, Mass Communication Methods. Classification of extension methods: analysis and comparison of different extension methods, Extension teaching methods and the innovation diffusion process, Selection of extension teaching methods. 
+
+AGRC 104: Introduction to Computer Science 
+Types of Computers and their Historical developments. Data representation and manipulation: binary (signed, unsigned, and floating), octal, hexadecimal, ASCII, addition and subtraction, conversion between decimal and other systems, Logic gates: design of simple circuits for data manipulation, Machine organization: ALU, registers, main memory, fetch/decode/execute cycle, Types of software and its applications. Computer Ethics and the Internet. 
+Laboratory Sessions: Hands on practice on Microsoft Word, Excel and PowerPoint. 
+
+AGRC 108: General Physics 
+Viscosity, surface tension, buoyancy, fluid pressure, Newton’s law, force, momentum types of forces, work power, energy, conservation of mass, momentum of energy, Heat: temperature, heat, work, gas law, specific heat capacities, heat transfer, melting point, relative humidity, Waves: wave phenomenon, types of waves, electromagnetic waves. Magnetics: magnetic field, magnetic effect of current, force on current-carrying conductors, and electromagnetic induction, heat effect of magnetism. Electricity: electric field. Coulomb's law, dialectic, time domain reflectometry, conductors and insulators, electric current, electromotive force, Ohm’s law, power, electric motors and transformers, electric circuits. Nuclear Physics: radioactivity, fusion, fission, application of nuclear physics.
+
+
+
+
+LEVEL 200 COURSES 
+
+AGEC 211: 	Microeconomics (Principles and Applications to Households and Firms) 
+Overview of Economics. The Economic Problem. Branches of Economics. Overview of Microeconomics: Nature, Use and Limitations. Concept of a Final Good. Concept of an Intermediate Good. Concept of a Market. The Market Mechanism. Shortage and Surplus in a Market. Effects of Demand and Supply Shift Factors on Equilibrium Quantity and Equilibrium Price. Final Goods Markets. Intermediate Goods Markets. Concept of Elasticity. Supply and Demand Elasticities for Final Goods Markets and Intermediate Goods Markets. Consumer Choice: Utility Curve, Utility Surface, Indifference Curve and Indifference Surface. Rate of Commodity Substitution. Budget Line. Consumer Equilibrium and Derivation of Consumer Demand Curve for Final Goods. Income and Substitution Effects. Producer Choice: Concept of a Production Function. Well-behaved Production Curves and Surfaces. Isoquant Curves and Surfaces. Marginal Rate of Technical Substitution. Production Elasticities. Isocost Curves and Surfaces. Objectives of Producers: Output Maximisation, Cost Minimisation, Profit Maximisation. Equilibrium of the Producer and Factor Demand Curves. Product Supply Curves and Surfaces. The Structure of Markets: Competition, Monopoly, Oligopoly and Monopsony. Agricultural Economics as an Applied Discipline. The Structure of Agriculture in Ghana. Government Policy and Agriculture in Ghana. 
+
+CROP 221: Introduction to Crop Production 
+The physical environment and crop production. Adapting crops and management practices to the environment. Soil and water conservation. Farming, cropping and agro-forestry systems. Plant propagation, crop establishment and management. Weed control strategies. Pest and disease control. Integrated crop nutrient management. 
+
+AGEN 201: Agriculture Engineering II 
+Stages of agricultural mechanization development; Aims and objectives of agricultural mechanization. Sources of farm power- Human, animal and mechanical power sources; types of tractors, features and specifications, comparison of various tractor types; Engines - Internal combustion engines, functions of various parts of the engine; Mechanical Power transmission: Principal reasons for the application of drives, different types of couplings and their applications, chain drives, belt and pulley drives, gear drives, Tractor Power Transmission System. Tillage: Objectives of tillage, primary and secondary tillage equipment (plows, harrows, etc). Planters and seed drills; methods of seed establishment, functions of a seeder, seed metering devices. Fertilizer distribution/broadcasters, Husbandry equipment: Field sprayers/dusters: Types of sprayers (hydro-pneumatic, mist blower etc). Factors affecting sprayer performance. Harvesting equipment: Harvesting methods, combine harvesters (basic operations, working principles, combine losses). Selection and maintenance of farm machinery. Farm machinery costing and records.
+
+ANIM 211: Introduction to Monogastric Production 
+Origin, distribution and characteristics of breeds of poultry in Ghana and Africa; definitions of terms used in poultry production; systems of poultry production; adaptation of poultry to the tropics; the poultry industry in Ghana – opportunities and challenges. Introduction to Broiler & Layer production. Origin and classification of swine. Distribution of Pigs. Anatomical characteristics. Definition of technical terms and terminology. Importance of swine to man. Swine behaviour. Breeds and their physical characteristics. Adaptive physiology/mechanism of adaptation. Growth and development in pigs. Stress syndrome in pigs. Nutrient requirements in swine life cycle.
+
+SOIL 203: Soil Genesis and Characterisation 
+Theory: This course introduces students to the fundamentals of soil genesis, characterization and classification. Topics include; Inorganic components of soils: rocks and minerals (primary, secondary and clay minerals); weathering. Soil formation and profile development; master horizons and layers, transitional and combination horizons, suffix symbols. Soil catena concept. Soil characterization; surface and subsurface diagnostic horizons and other diagnostic properties; soil classification: basic principles and purposes of soil classification, soil as a population, pedon and polypedons, single and multiple categorical systems, technical and natural classification systems. Basic characteristics of the USDA soil orders and their FAO (WRB) equivalents; Ghanaian classification system. 
+Practicals: Identification of minerals and rocks; Soil profile description: soil depth, boundary between horizons, texture by feel, soil colour, consistency, structure.
+
+BCMB 205: General Biochemistry 
+Cell Structure and Function and Methods and Techniques of studying the Cell: General features of prokaryotes & eukaryotes; compartmentalization of cellular processes; Source tissue/cells selection; cell disruption and fractionation. Structure, Function and Metabolism of Carbohydrates: - mono-, di-, oligo- and polysaccharides; functions of carbohydrates; stereoisomerism; Glycolysis, substrate level phosphorylation, hexose monophosphate shunt, gluconeogenesis, synthesis of other carbohydrates from monomers, fate of pyruvate in different organisms; the electron transport chain in mitochondria and ATP synthesis. Structure, Function and Metabolism of Lipids: Different types and functions of lipids (fatty acids, triacylglycerols, phospholipids, etc); beta oxidation of fatty acids; fate of acetyl CoA units (TCA cycle, ketone bodies, cholesterol); synthesis of fatty acids. Structure, Function and Metabolism of Proteins: Amino acids: buffer solutions & buffer capacity; the Henderson-Hasselbach equation in the preparation of buffers in biological assays and systems. pKa and pI. Oxidative deamination; decarboxylation; transamination ; urea cycle; NH3 assimilation; fate of carbon skeleton (glucogenic and ketogenic amino acids); metabolism of some individual amino acids. Integration of metabolism. Protein structure, classification and functions. Enzymes: Properties & classification; factors affecting activity (co-factors & co-enzymes, pH, temp., [S], [E]); control of activity; kinetics; Michaelis-Menten equation. Nucleic acids and Protein Biosynthesis: Nitrogenous bases, nucleosides, nucleotides and nucleic acids. General overview of DNA replication, transcription and translation; Molecular basis of mutations. 
+
+AGRC 200: Long Vacation Practicals 
+Students shall undertake practical training during the long vacation at the three research centres (ARCs) of the College, namely, Forest and Horticultural Crops Research Centre- Kade, Soil and Irrigation Research Centre- Kpong, Livestock and Poultry Research Centre- Legon. Students will be exposed to the following: 
+At Kade – forest agriculture, husbandry of crops and agroforestry 
+At Kpong – soil classification, soil water relationship and rice cultivation 
+At Legon –livestock and poultry, animal nutrition, health and traction. 
+
+AGEC 212: Macroeconomics (Principles and Applications to Economy of Ghana) 
+Concept of an Economy, Definition of Macroeconomic Theory. National Income Accounting. Aggregate Output Function. Aggregate Labor Demand and Supply Functions. Consumption, Savings and Investment Functions. Money Demand and Supply Functions. Fundamentals of National Income Determination. Aggregate Demand and Supply Curves. Business Cycles. Fundamentals of Exchange Rate Determination. Fundamentals of the Causes of Inflation. Applications to the Economy of Ghana.
+
+AGEX 206: Approaches to Extension 
+The objectives of this course are to expose students to the concept of extension approaches and the relevance of these approaches to extension delivery. The concept of extension approaches and the conditions that necessitate the adoption of specific extension approaches, Differences between extension approaches and extension methods. Approaches to agricultural extension delivery-the general agricultural extension approach, Training and visit approach, farming systems research approach, Cost sharing / cost recovery approach, Commodity specific approach, Farmer Field Schools, Convergence of Sciences and Innovation systems approaches: Evolution of extension approaches in Ghana (including the current state and future of extension services in Ghana). 
+
+ANIM 212: Elements of Microbiology and Immunology 
+Distinguishing characteristics of microbes – bacteria, fungi, viruses, viroids, protozoa and prions. Morphology, growth and nutrition of common microbes: Microbial culture. Virus replication, infection of cells and disease induction. Classification of microbes and infectious agents. Control of growth of microorganisms. Nature of microbial-host association. Germ Theory of Disease. Fundamentals of Immunology: Innate immunity, Antigen and Antigen and Antibody; Immunity; principles of vaccination and immunoprophylaxis. Hypersensitivity. Food Microbiology: Food spoilage and preservation; microbiology of fermented foods; Microorganisms as source of food.
+
+CROP 222: Insect biology and Plant Microbes 
+Insects as arthropods and their inter-relationship with other members of the phylum Arthropoda. Characteristics of insects, features of insects that have enhanced their success. Importance of insects to agriculture. Morphology of insects; Anatomy and physiology of organ systems. Locomotion in insects, and some aspects of insect behaviour. Entomological techniques. Classification of insects, with emphasis on the recognition of representation of all the insect orders. History of Microbiology: role of discovery and spontaneous generation of microbes and germ theory of diseases. Characteristics of plant microbes (fungi, bacteria, viruses, viroids, mollicutes, nematodes, algae and protozoa): morphology, structure and function, growth, reproduction, dispersal and classification of the microbes. Importance of plant microbes in agriculture: including soil fertility involving rhizobia, mycorrhiza and algae.
+
+SOIL 204: Chemical and Biochemical Properties of Soils 
+Theory: Chemical Properties (6 weeks): Soil colloids and ion exchange phenomenon; adsorbed cations – basic and acidic cations, cation exchange capacity (CEC); effective cation exchange capacity (ECEC) of soils; cation exchange and availability of nutrients; anion exchange capacity (AEC). Buffering of soils, buffer capacity of soils. Soil reaction. 
+Biochemical/Microbiological Properties (7 weeks): The soil as a habitat for microorganisms. Factors influencing microbial nutrition and growth. Introduction to microbial genetics. Methods for studying soil microbial population. Interrelationships among soil microorganisms. Organic residues in soil. Organic matter composition and function in soil. Introduction to soil enzymes. 
+Practicals: Soil pH, soil organic carbon, soil nitrogen, soil phosphorus, CEC, exchangeable bases. Aseptic transfer techniques, growth requirements of microorganisms, Gram staining procedure for typing microbes, estimating microbial numbers by plate count.
+
+AGRC 212: Introductory Statistics 
+Descriptive Statistics: Graphical Forms and Charts; Measures of Central Tendency; Summary Statistics; Measures of Dispersion. Probability and Sampling Distributions: Normal Distribution; Student‘s t-distribution; F-distribution; x²-distribution. Sampling: Simple Random Sampling; Stratified Sampling; Cluster Sampling; Independent Samples and paired observations. Estimation and Hypothesis Testing: Bias, Precision, Accuracy; Type I and Type II Errors; One Sample Hypothesis; Two-Sample Hypothesis. Chi-Square Analysis and Contingency Tables Correlation Analysis: Types of Correlation, Rank, Product Moment (standard Correlation) Dichotomous Nominal, Point Biserial, Intraclass, etc. Test for significance of Correlation; Comparisons of Correlations. Simple Linear Regression: Assumptions and Pitfalls; Least Squares Estimation of parameters; Test of Significance/ Comparing Linear Regression models Introduction to Analysis of Variance: The Simple One-Factor Model; Two-Factor Models/Interactions of Factors in Analysis of Variance.
+
+LEVEL 300 COURSES
+First Semester
+
+AGRC 311: Introductory Genetics 
+The general approach to biology: genetics and the questions of biology, the molecular basis of genetic information, the program of genetic investigation, methodologies used in genetics, model organisms, genes, the environment and the organism; Transmission genetics: single gene inheritance, independent assortment of genes, mapping eukaryotic chromosomes, gene interaction; From DNA to Phenotype: DNA: Structure and replication, RNA: Transcription and processing; Proteins and their synthesis, Regulation of Gene Expression, Genomes and Genomics; Mutation, Variation and Evolution: The Dynamic Genome, Mutation, Repair and Recombination, Large scale chromosomal changes, Basic concepts in population, quantitative and evolutionary genetics; Gene isolation and manipulation.
+
+AGEX 311: Development Sociology 
+The course aims at enabling students to apply sociological concepts to understand the culture of societies and how they can work effectively with rural communities given their different cultural backgrounds. The nature of Rural Sociology and Social Anthropology; Culture of Rural Societies; the Rural community, Farm family and household, Processes involved in rural and farming change, Social change in rural communities, Methods of influencing human behaviour and Sociological factors in technology development and transfer. 
+Practical session: Students will visit rural communities to observe existing land tenure arrangements, inheritance, taboos, superstitions, and farmer groups and discuss how the above influence agricultural and rural development.
+
+AGEX 313: Gender Planning and Development 
+The course will analyse what it means to be a “man” or “woman” in different socio-cultural contexts, how gender roles are learned, and how these gender roles translate into gender needs. The concept of sexuality and gender, Gender roles and how they are shaped and learned, Triple roles of women, Practical and strategic gender needs, gender-based access to and control of resources within households. Gender equality, gender based violence, gender mainstreaming and roles of the state, Role of men and women in technology development and the innovation process. 
+Practical session: Students will visit communities to identify gender roles and how such roles influence control and utilization of resources for crop and livestock production.
+
+ANIM 311: Principles of Animal Nutrition 
+The study of the processes that deal with feed consumption and assimilation to promote maintenance and production; Classification and functions of nutrients; Feed classification and quality evaluation; Interrelationships between nutrition and animal health.
+
+AGEC 311: Farm Management 
+The Field of Management, Factors Affecting Managerial Effectiveness, Basic Management Concepts, Farm Management Information, Preparation of Financial Accounts, Analysis of Financial Accounts, Management Accounts, Farm Budgets, Control, Risk and Uncertainty.
+
+AGEC 313: Microeconomic and Macroeconomic Theory 
+This course builds on courses AGEC 211 and AGEC 212. It presents the theoretical underpinnings of both macroeconomic and microeconomic phenomena. At the end of the course, candidates should be able to understand and explain economic phenomena using geometry, calculus and difference equations. Candidates are also required to apply the theories learnt to the economy of Ghana. 
+I. Introduction: Overview of the Nature of Scientific Theory. The Scientific Method of Enquiry. Methodology of Economics. Nature and Purpose of Economic Theory. Concept of an Economy. Definition of Macroeconomic Theory. Definition of Microeconomic Theory. Concept of a Market. 
+II . Microeconomic theory: Theory of Production. Theory of Cost. Theory of Factor Demand. Theory of Product Supply. Theory of Consumer Demand. Consumer Surplus. Producer Surplus. Economic Welfare. 
+III. Macroeconomic theory: The Classical Theory of Employment and Aggregate Output. The Classical Theory of Inflation. The Complete Classical System. The Keynesian Theory of Employment and Aggregate Output. IS/LM Framework. Monetary and Fiscal Policy. The Keynesian Theory of Inflation. The Inflation-Unemployment Relationship. Structuralist Theory of Inflation. The Complete Keynesian System. The New Classical Macroeconomics: Rational Expectations Theory. Theory of Business Cycles.
+
+CROP 311: Crop Protection 
+Concept of pests. Classification of pests. Economic importance of pests. Effects of pest presence. Methods of pest control. Merits and demerits of different methods, with emphasis on pesticides. Current trends in pest control. Meaning, scope and history of plant pathology; concept of diseases in plants; Importance, classification, causes, symptoms and general control of plant diseases.
+
+CROP 315: Principles of Horticulture 
+An introduction to plant propagation techniques, career opportunities in ornamental horticulture, as well as a look at the ornamental crop industry in Ghana. Methods of propagation, environmental factors affecting production and control of flowering will be treated. Production systems for flower, foliage and turf crops, particularly floral designs, nursery management, house plant care, specialized crop production, postharvest handling and marketing will also be discussed.
+
+SOIL 307: Environmental Soil Physics I 
+Theory: Movement of water in soil: saturated water flow in soil, Darcy's law, water infiltration (horizontal and vertical), profile moisture distribution after infiltration, Empirical infiltration equations, Green and Ampt approach; Soil texture: Soil structure: aggregate stability, factors affecting soil structure; soil strength; Tillage: "clean" and conservation tillage practices, residue management; Physics of rainfall: amount, intensity, kinetic energy, momentum; Surface runoff and water erosion: laminar and turbulent flow, particle transport by running water, sheet, rill and gully erosion, erosivity of rainfall, erodibility of soil. The Universal Soil Loss Equation (USLE); control of soil erosion: agronomic and engineering methods.
+Practicals: Field infiltration determination using the double ring infiltrometer, determination of aggregate stability, estimation of rain drop diameter and kinetic energy of rain, estimation of rainfall intensity from rainfall charts and calculation of kinetic energy using an empirical equation; estimation of soil erodibility using soil particle size distribution; estimation of rainfall erosivity index.
+
+SOIL 309: Soil Research Methodology and Laboratory Analyses 
+Hypothesis formulation and experimental design in soil science research; Site selection, characterization and sampling techniques; Laboratory safety and responsibilities, Quality control in the laboratory; Principles of soil, water, air and plant analyses; Instrumentation and methods of soil, water, air and plant analyses – physical, chemical, microbiological and mineralogical; Interpretation of analytical data; Writing scientific reports and the use of scientific language.
+
+
+
+Second Semester
+
+AGRC 312: Principles of Biotechnology 
+An introduction to biotechnology and career opportunities in biotechnology. Basic biological properties: Cells, Information and information transfer, Extra-Chromosomal DNA. Introductory genetic engineering. Cell and Tissue Culture and Cell fusion: plant and animal cell and tissue culture, production of hybrid cells by membrane fusion. Application of biotechnology: The genetic engineering of microorganisms, Transgenic plants – products available and products in the pipeline, development and use of transgenic plants; Production of Transgenic animals and their uses; Improvement of animal health and production; management of soil microorganisms for agriculture – production of inoculants and other biofertilizers. Issues in biotechnology-Ethical issues, Priority setting, Social issues, Financing issues.
+
+AGEX 312: Extension Programme Planning and Evaluation 
+This course aims to help students appreciate the processes involved in programme planning and be able to plan programmes for development work. Concept of extension Programmes; Importance of an extension programme; stages of an extension programme; measures for enhancing effectiveness of extension programmes; Extension Programme Cycle; Concept of Planning; Programme implementation, Monitoring and evaluation of Extension Programmes; Post-implementation stage and Terminal evaluation of Extension Programmes. 
+Practical session: Students will visit existing NGOs, FBOs, and Government institutions to acquire firsthand information on how they organise their programme planning activities. Students will undertake situational analysis of a rural community, analyse the data and identify a rural problem that needs intervention.
+
+AGEX 314: FBO Development and Management 
+The course aims at exposing students to the theoretical foundations in the establishment, development and management of FBOs. At the end of the course students will acquire the competencies to help communities establish, manage and grow their own FBOs. Theoretical basis of evolution of FBOs, Classification of FBOs, Core functions of FBOs, Establishment, growth and management of FBOs, Policy issues concerning establishment and development of FBOs, The role of development agencies in promoting FBOs, Issues relating to participation in FBO activities, Understanding stakeholder responsibilities in FBOs development, The role of FBOs in agricultural and rural development. 
+
+AGEX 316: Climate Change and Adaptation in Agricultural Development 
+The purpose of this course is to train students to identify and manage climate change challenges and opportunities in agricultural development. The concept of climate change, causes and effects on natural resources, agricultural productivity, food security, and rural-urban migration, health and society in general. Mitigation and adaptation strategies and restoration activities. Measures of protecting and diversifying livelihood strategies. The role of Information and Communication Technology in Climate Change adaptation, Gender issues in Climate Change. Climate change mitigation and adaptation measures and their associated costs in Ghana. 
+Practical sessions: Students will visit communities near areas such as beaches, rivers, streams, mountains and degraded lands to observe signs of climate change and interact with the community members to determine the types of adaptations they have employed to mitigate the effects of climate change on their livelihood. Students will elicit from community members living near beaches, rivers, streams, mountains and degraded lands their understanding of climate change.
+
+ANIM 312: Introduction to Ruminant Production 
+Definitions, points of the animal and strategic importance of ruminants to human needs. Origin and distribution of sheep, goats and cattle in Africa. Systematic classification and feeding behaviour of small ruminants and cattle. Characteristics of specialized beef breeds of cattle. Ghanaian cattle breed and characteristics. Factors affecting small ruminant and beef production and constraints to enhanced productivity. Increasing the efficiency of ruminant production-issues to consider. Selection of site, housing and environmental control. Selection and care of foundation, breeding and replacement stock and herd. Systems of husbandry practices in feeding, breeding, record keeping and marketing. 
+
+ANIM 314: Principles of Animal Breeding 
+Genes and gene action; The nature and control of gene function; Phenotypic expression of genes; Types and consequences of mutations and chromosome aberrations; Detrimental and lethal genes in farm animals; The concept of gene frequencies; Economic traits of farm animals; Components of phenotypic variance; Heritability and repeatability; Inbreeding and relationships; Introduction to the principles of selection – theory and practice.
+
+
+
+AGEC 312: Project Analysis 
+The Project Concept, The Project Cycle, Aspects of Project Preparation and Analysis, Identification of Project Costs and Benefits, Measures of Project Worth, Steps in Agricultural Project Preparation, Guidelines for Project Report Writing, Mutually Exclusive Projects, and Presentation of Group Reports.
+
+AGEC 314: Research Methods, Statistics & Mathematics for Economists & Business 
+The scientific method of Enquiry in Business & Economics research; Basic and Applied Research; the Scientific Research Process; from proposal writing to dissemination of results; Data/Information Gathering; Methods of Data Collection; Sampling Techniques; Organizing Data for Analysis: Coding, Cleaning, Summary Statistics; Farming Systems Research; Economic Analysis of Agronomic Data. Nature of Statistics, Uses of Statistics in Economic and Business Research Models; Concept of a Random Variable; Probability Distribution Functions; Measures of Central Tendency; Measures of Dispersion; Moments of a Distribution: 3rd and 4th Moments (Skewness & Kurtosis); Concept of a model/Use of Economic models; Classical normal regression assumptions and estimation procedures of the Ordinary Least squares; Desirable Properties of estimators & Hypothesis Testing. Role of Mathematics in Economic and Business Research; Variables and Parameters, Domain of Variable; Concept of a Function: Explicit and Implicit Functions, Inverse Functions; Functional Forms: Linear, Quadratic, Cubic, Polynomial, Logarithmic, Exponential, Inverse, Semi-Logarithmic, Double Logarithmic (Log-Log) Functions; Equations: Solution of Linear, Quadratic and Cubic Equations; Matrix Algebra; Differential Calculus; Optimization Problems: Unconstrained and Constrained Optimization Problems; Integral Calculus.
+
+CROP 322: Crop Physiology 
+Major physiological processes in plants including seed germination, plant-water relations, mineral nutrition, photosynthesis, biological nitrogen fixation and respiration. Introductory environmental physiology including photoperiodism, vernalization and temperature stress as well as air, soil and water pollution stresses on plants. Plant growth substances and growth regulation. Crop growth analysis, especially, leaf area index, leaf area duration, crop growth rate and net assimilation rate.
+
+FAPH 304: Introduction to Postharvest Technology and Crop Losses 
+Meaning, brief history and importance of postharvest technology in Ghana and in the world, Population growth, global food situation and postharvest technology issues, Gender issues in postharvest technology, Types of stored food produce; perishable and durable products, National food security, assessment of regional variations and food balance sheet, Role of postharvest technology in the economic development of Ghana, Methods for increasing food supply e.g. increasing land under cultivation improving productivity, reducing losses etc, Components of the system (e.g. harvesting, Agriculture produce (from, varieties/breeds), Environmental factors (e.g. tropical region, temperature, relative humidity, moisture, gases, light), Pests and diseases, Storage structures, Processing and preservation conveying/transportation, Packaging; Post-harvest losses (definition, origin, nature and extent of losses); agents of losses; biological., microbiological chemical, physical, technical, genetic; detection and assessment of losses (importance of loss assessment, detection of external and hidden infestation, description of various detection methods, inspection procedures and frequency for bagged and bulk durable produce, description of loss assessment methods, simple and complex methods, their merits and demerits, description of equipment used to determine losses, sampling techniques used in loss assessment, demonstration of sampling techniques.
+
+SOIL 306: Management of Soil Environment 
+Theory: Soil Chemistry (7 weeks): Nutrient elements: forms and their availability in soils, functions in plants, deficiency symptoms. Types of fertilizers, manufacture of nitrogen, phosphorus and potash fertilizers; fertilizers and calculations involving rates of application. Fertilizer usage: fertilizer and economic development, cost/benefit of fertilizer use, effect of fertilizer use on the soil environment. Fertilizer application methods: broadcast and band application, side-dressing, top dressing, foliar application; liming and liming materials. Nutrient uptake processes, mass flow, diffusion and contact exchange. 
+Biochemistry/ Microbiology (6 weeks): Crop residues and their uses and management in agriculture, decomposition of organic matter (cellulose, hemicellulose, lignin), microbiology and biochemistry of composting (applications, microbiology and biochemistry), green manuring, nitrogen, phosphorus and sulphur transformation in soil. 
+Practicals: Soil fertility assessment, pot experiments with N,P,K, and analysis of plant tissue, micro-nutrient analysis, free iron determinations, pH changes due to nitrogen fertilizers (demonstration in solution culture) heavy metals, soil salinity assessment: electrical conductivity, determination of inorganic carbon, soil carbonate content. Microbial decomposition of organic materials in soils (effect of temperature, C:N ratio, moisture, soil texture, etc.).
+
+SOIL 308: Soil Degradation and Rehabilitation 
+Introduction to soil degradation; Historical developments in soil degradation; Basic concepts; Causes and forms of soil degradation (Biological, Chemical, Physical); the extent of soil degradation in Ghana; The GLASOD project; Use of GIS to assess soil degradation –case studies; Principles and methods of rehabilitation and reclamation of degraded soils – regulations, policies and community involvement.
+
+
+
+
+LEVEL 400
+
+AGRC 411: Entrepreneurial Skills 
+Definition of micro enterprise, Classification of micro enterprise. Importance and role of micro enterprise in the socio-economic development of a country. Entrepreneurship and rural livelihoods. Entrepreneurial Characteristics of Successful Entrepreneurs. Entrepreneurship development process; opportunity recognition, information search, resource mobilisation, choice of enterprise size/location, launching of enterprises. Principles of innovation. Business Plan Development and implementation. Product selection and development. Enterprise development opportunities in Ghana; development of micro enterprises in storage/warehousing, transportation, value-added processing, packaging and labelling, sales and distribution, advertising, financing, manufacturing of tools and equipment, processing services, etc; industrial profiles of major agricultural commodities. 
+Business defined; forms of business - proprietorship, partnership, co-operative societies, companies (Corporations); basic management principles: communication/public speaking; time management; Winning and maintaining customers; source of business finance; financial management tools.
+
+AGRC422: Introductory Agro-forestry 
+Concept of Agro-forestry: Definitions, Classification, Advantages and Disadvantages, Sustainability of Agro-forestry. Agro-forestry in crop production; Livestock Agro-forestry systems; Agro-forestry for soil fertility management; Economics of Agro-forestry. 
+
+AGEX 412: Management of Development Organisations                                  This course will enable students to explore and clarify their assumptions, beliefs, and values about organisations and sharpen their understanding of leadership skills and apply this to their environment. The concepts of management, management roles and dimensions of management jobs. Understanding of organizational structure, leadership theories and management in extension organizations. Motivation and delegation in management. Human resource development in extension organizations. Sources of power and the application of power in organizations. Measures of Organisational Effectiveness, Communication in Organisation, Organisational Learning-single Loop and Double Loop, Stress and Conflict Management.
+
+AGEC 400: Research Project 
+Students are expected to choose a subject of scientific inquiry and follow all relevant protocols to investigate the problem. Guided by a lecturer supervisor, they will produce a report, which will be assessed on the basis of its scientific rigor, depth of analysis and flow of thought among other things. The course is run in both first and second semester. 
+
+ECON 311: Microeconomic Theory I (See Economics Department) 
+ECON 313: Macroeconomic Theory I (See Economics Department) 
+ECON 312: Microeconomic Theory II (See Economics Department) 
+ECON 314: Macroeconomic Theory II) (See Economics Department) 
+ECON 443: Econometrics I (See Economics Department) 
+ECON 444: Econometrics II (See Economics Department)
+
+AGEC 411: Agricultural Marketing and Research 
+Introduction: Ghana‘s GPRS goals and agricultural marketing; marketing versus marketing research; definition and scope of marketing research; types of marketing research; purpose of a market research; factors that affect marketing research decisions; new products research. 
+The marketing research process (I): problem definition and determining research objectives; determining research design and methods. 
+The marketing research process (II): sampling approaches; data collection—primary and secondary; questionnaire construction and data entry. 
+The marketing research process (III): data analysis—preparing the data for analysis, using descriptive statistics, using graphical analysis. 
+The marketing research process (IV): overview of other analytical tools, effective report writing. Selected applications to marketing research: sales analysis, product and packaging, market research, distribution research, advertising research, motivation research.
+
+AGEC 412: Agrifood Business and Agroprocessing 
+Introduction: Definition: agriculture, business and the concept of food; the agricultural modernisation goal and agro industrial development. The current situation of the agro industry in Ghana. A Systems Approach to Agro industrial Analysis: production chain linkages, macromicro policy linkages, institutional linkages, international linkages. Alternative analytical methodologies: Porter’s value chain approach. Options in Agri food Business Organisation: basic concepts in organisational development, integration, differentiation, the co-operative system, outgrower schemes. Principles of Agro processing: the basic component activities of agro processing (Procurement, processing and marketing). The governance structure: Food safety and environment issues, laws and institutions in Ghana. Case Studies:- The management marketing and financing strategies in the: Egg Production Business, Chicken meat processing business, Palm Oil Processing business, Fruit Processing business, Grain processing business.
+
+AGEC 413: Agribusiness Management 
+Overview of Managerial and Business Economics; Micro-economic Concepts and their Application to Business; Business Behaviour in Different Market Structures; Production and Costs; The Firm and Its Environment; Demand Estimation: Regression Analysis; Decision Making Under Uncertainty; Product Pricing; Types of agribusiness ownership, such as Sole Ownership, Partnership, Corporate Structure, etc. Managing the agricultural business, including strategic management, comparative advantage and competitive advantage, value chain analysis. Business analysis and control – financial Statements, profit and loss statement, financial ratio analysis, and performance and activity analysis. Managerial Economics and Public Policy – how and why market regulation. Globalization – of markets and production; drivers of globalization. Economics of Human Resource Management. Case Studies.
+
+AGEC 414: Fundamentals of Business Planning & Policy 
+The nature and Importance of Business Policy and Planning; Policy and levels of planning (global, national, community and firm). The business Planning Process: Feasibility study, the route to market entry; and the business plan. Strategic planning: Choosing the strategy, implementing the strategy, evaluating the strategy. Annual plans; action plans (the logical framework). Contingency planning; Information systems for planning; Policy implementation.
+
+AGEC 415: Quantitative Methods & Operations Research 
+Introduction, Probability and Decision Making, Index Numbers, Time Series Analysis, Correlation and Regression Analysis, Forecasting, Network Analysis and Scheduling, Inventory Control, Simulation Analysis, Waiting Lines Analysis (Queuing Theory), Linear Programming- Simplex Method and Advanced Methods, Transportation and Assignment Problem.
+
+AGEC 416: Managerial and Business Economics 
+The purpose of the course is to introduce students to the economic environment in which businesses operate, and provide an understanding of how economic principles are applied in management and business. Course content: Overview of the course: the scope and nature of managerial and business Economics; Internal organization of firms; Consumer behavior; The firm and its Environment; Alternative Business objectives; Markets and industries; Demand estimation and forecasting; Production and costs; Linear Programming and production Structures; Market structures; Pricing practices; Decision making under uncertainty; Capital budgeting; The economics of Human Resource Management; Business information; Forms of business organization; The role of government in the market economy.
+
+AGEC 417: Management Accounting 
+Overview of Management Accounting, Basic Cost Classifications and Concepts, Materials Control, Ledger Accounting, Marginal and Absorption Costing, Product Costing Systems, Cost-Volume-Profit (CVP) Analysis, Budgetary Control, Standard Costing, Performance Measurement.
+
+AGEC 419: Agricultural Marketing & Price Analysis 
+The role of prices; demand analysis (theory), focusing on review of consumer behavior, utility maximization, elasticity, substitution & income effects of price changes, Engel curves. Demand analysis (empirical consideration), demand for a typical farm product, formulating demand equations, demand for agricultural inputs. Supply analysis, supply relation in agriculture, estimating supply functions (direct & indirect approaches). Estimation problems, model specification, using cross-section and time-series data, interpreting estimated parameters, statistical tests, and forecasts. Introduction to Futures market. General overview of Agricultural pricing policies in Ghana. 
+Overview; business, marketing and trade; problems in agricultural marketing and trade, the concept of market, market structure and trade; Group behaviour and pricing (Non-collusive oligopoly models, collusive oligopoly concepts); non-price competition; Critical issues in international trade (the foreign exchange market, tariffs, balance of payments, economic integration).
+
+AGEX 411: Theoretical Foundations of Innovation in Development Work 
+The purpose of this course is to expose students to the theoretical underpinnings of the concept of innovation in Agricultural extension. At the end of the course it is expected that students will appreciate the history and emerging trends of innovation in modern agriculture and the importance of theory in promoting innovation. The concept of innovation; philosophical underpinnings of innovation before, during and after the agricultural revolution; different types and categories of technological innovations; from Technology Transfer to Communication of Innovations, Social Learning, Modernization and Dependency theories; and Emerging theories on innovation. 
+
+AGEX 413: Rural Livelihoods and Food Security 
+The course aims at exposing students to the concepts of rural livelihoods, food security, and food insecurity, and the implications of food security on rural development. Students will acquire the knowledge and skills to facilitate the selection, establishment and management of sustainable livelihood strategies for the attainment of food security by rural communities. The concept of livelihoods: the sustainable livelihood framework, Selection and management of sustainable livelihood strategies; livelihood outcomes, sustainable livelihoods and food security, measurement of food security, causes of food insecurity, Food security and rural development. 
+Practical session: Students will visit rural communities to observe the existing livelihood assets at their disposal and existing livelihood diversification activities that they are engaged in. Students will determine the food security situations of the different categories of people (women, children, and the aged) in the selected communities. 
+
+AGEX 415: NGO Development and Management 
+The course aims at providing students with the theoretical foundations and the fundamental principles of NGO development and management. Students will acquire the knowledge, skills and competencies in: Theoretical foundations for the establishment of NGOs, Classification, NGO formation and management. Core functions, Staffing, NGOs and development theories; Understanding NGOs in historical perspectives. Gender mainstreaming in NGO development, Strengths and weaknesses of NGO action, Relationships between NGOs and Governmental Organizations, Responsibilities of stakeholders in NGO work, Financial management of NGOs, Human resource management in NGOs.
+Practical session: Students will visit selected NGOs to study how they manage their activities in terms of client selection, programme development, financing of programmes, staffing the NGO, and level of participation of beneficiary communities.
+
+AGEX 416: Human Resource for Development Organisations 
+This course aims at providing students with the theoretical basis of human resource development. It also enhances the understanding of the psychological basis of learning and teaching to enable students appreciate the role of education and training in organizational development and personnel needs. Theoretical basis of training (human resource development), Psychology of training, Principles and practices of training, The role of training in extension organizations, Knowledge, attitude and practices in extension delivery. Training needs assessment: job analysis, task analysis, job specifications and description, Training methodologies and approaches, Fitting training to organizational and personnel requirements, Monitoring and evaluation in training, training manual development, Training module development, selection of training methods for knowledge, attitude and practice development, Learning theories and training. 
+
+AGEX 414: Sustainable Agricultural Value Chain Development 
+This course aims at exposing students to the usefulness of value chain thinking to commercialization of agriculture and rural development. Definition of value chain, principles of value chain approach, Objectives of value chain development. Mapping the market: Main actors, Business Development Services and the Enabling environment. Vertical and horizontal linkages in the chain. Comparative analysis of value chains for different commodities, value chain and commercialization of agriculture, Value chain and poverty reduction strategies, Role of stakeholders in value chain development, application of value chain principles to community development. 
+Practical session: Students will visit the actors (producers, input dealers, processors, marketers, exporters, and consumers) of the main agricultural commodities and determine/observe how they perform their functions.
+
+AGEX 418: Use of ICTs in Agriculture 
+The purpose of this course is to empower students and build their capacity to use and appreciate the essence of ICT in agricultural development. Emphasis shall be laid on the application of internet, radio and telephone for the dissemination of relevant agricultural information. Introduction to ICT; Web-based resources in agriculture; ICT applications for the Agricultural sector; Case studies in the use of ICT in agriculture, particularly in extension services; The skills and practice of broadcasting; Developing radio broadcasting programmes; negotiation with radio stations to include relevant/targeted extension programmes, monitoring and evaluation of radio listeners’ performance. 
+Practical session: Students will visit radio broadcasting stations to acquire the following; Skills and practice of broadcasting. Developing radio broadcasting programmes, negotiation with radio stations to include relevant/targeted extension programmes, monitoring and evaluation of radio listener‘s performance.
+
+ANIM 410: Research Project 
+A Student in the final year must choose a specific animal health and production-related topic and under the guidance of a lecturer investigate to produce a dissertation. As a two-semester course, students are expected to spend some time reading and understanding the wider context of their area of inquiry. The final report so produced must be submitted to the Department through their supervisors.
+
+ANIM 413: Biometry 
+Statistical inference; one-way and two-way analysis of variance; experimental design: single factor, factorial experiments. Qualitative and quantitative factors. Fixed, random and mixed models. Nested and nested-factorial experiments. Experimental design – Two or more factors. Split-plot Design; confounding systems. The course will be aided by use of statistical software. 
+
+ANIM 414: Applied Animal Breeding 
+Principles of selection; genetic effect of selection; selection for different kinds of gene action. Basis for selection. Methods of selection, Response to selection and factors affecting it. Systems of mating; Systems of breeding and selection for the genetic improvement of various species of livestock. Special problems of implementing genetic improvement of livestock programmes in the tropics (with particular reference to Ghana); Open nucleus breeding schemes. 
+
+ANIM 415: Applied Animal Nutrition 
+The digestion of starch and protein in the pig and cattle – glands, organs, digestive juices, enzymes and end products. Bioenergetics and partition of energy within the animal. Evaluation of feeds; in vivo, in vitro and in Sacco. Use of metabolizable Energy concept in Animal Feeding. Proteins in feeds – measures of protein quality for monogastrics and Ruminants. Ration formulation and Nutrient Requirements for body functions.
+
+ANIM 416: Ruminant Animal Production 
+Small Ruminant Production 
+The millennium development Goals and the Livestock revolution – the role of the Animal Scientist. The bane of the small ruminant production on the coastal savanna of Ghana; sustainable dry season feeding strategies; Improving the reproductive efficiency of breeding ewes and rams. Other management practices – Flushing, creep feeding, weaning and calendar of activities on a small ruminant farm. 
+Dairy Cattle Production 
+Importance of milk and dairy products. Breeds of dairy cattle – characteristics and production. Status of the dairy industry in Ghana. Constraints to milk production in Ghana. Essentials of a profitable dairy operation. Milk yield and composition and factors affecting them. Management and milking of the dairy herd. Managing dairy cattle for high fertility. 
+Forage Production, Management and Conservation 
+Types of pastures; natural, cultivated. Management and improvement practices of grasslands; reseeding, fertilization, water supply, weed control, burning, supplementary feeding. Concepts of grazing; stocking rate, carrying capacity, grazing capacity, overgrazing. Grazing management systems; continuous, rotational, zero, deferred. Forage conservation; aims, techniques, socio-economic and technical considerations, haymaking, silage making.
+
+ANIM 417: Monogastric Animal Production 
+Avian biology and its importance in management. Hatchery set up and management. Rearing of broiler breeders. Management of various species of poultry. Processing and marketing of poultry. The importance of swine farming. Housing and equipment. Breeding. Puberty in pigs. Pregnancy and farrowing management. Requirements and management of suckling pigs. Feeding strategies. Feed/diet formulation for sows and growing/finishing pigs. Health, marketing and record keeping. 
+
+ANIM 418: Animal Health and Physiology 
+Physiology (7 weeks) Comparative anatomy of the reproductive organs of the different livestock species. Oestrous cycles and synchronization of estrus. Fertilization and maintenance of pregnancy; structure of the mammary glands, initiation and maintenance of lactation. Reproductive organs of the hen and egg laying. Artificial insemination. Response of farm animals to high and low ambient temperatures. effects of high ambient temperatures on the productivity of farm animals. Alleviation of heat stress through management practices. 
+Health (6 weeks): intensive production and reproductive problems in farm animals. Common general pathologic and inflammatory conditions affecting the male and female genitalia of food animals. Classical health problems associated with pregnancy, gestation and the puerperal period in livestock. Abortions and other post-parturient conditions in farm animals. Intensive production and management of health problems in poultry. Reproductive failure in farm animals - sterility, infertility and their management and control signs, diagnosis and production significance of pregnancy in food animals. Problems of parturition- dystocia, retained placenta, management of uterine prolapses, ruptures and abnormal presentations in farm animals.
+
+ANIM 419: Meat Science and Technology 
+Definitions; Anatomy of Livestock/Poultry; Conversion of muscle to meat; Carcass/meat grading and evaluation; By-products of Meat Industry; Storage and Preservation of meat; Microbial flora of meat and meat products; Factors influencing quality of Cured meats; Marketing of meat and meat products. 
+
+ANIM 422: Anatomy of Digestive Physiology 
+Signs and factors affecting health in farm animals. Deficiency diseases of farm animals (mineral and vitamin deficiencies in cattle, sheep, goats and poultry) selected major diseases of farm animals in Ghana. Incidence, aetiology, transmission, epizootiology, pathogenesis, clinical symptoms, pathology, diagnosis, treatment and control of bacterial viral protozoan and parasitic diseases of ruminants, pigs and poultry. Notifiable and zoonotic diseases, responsibilities of stockowners and in relation to requirements of the Veterinary Services Department of Ghana. 
+
+ANIM 421: Principles of Range And Forage Science 
+Definition of ecological terms. Ecosystem concept and function. Types of biological relationships. Succession and range condition. Ecology and range management. Economic importance and types of grasslands. Factors affecting development of grasslands. Aims and techniques of forage conservation. Criteria for choice of species for forage production. Pasture establishment process and methods. Factors influencing pasture establishment. Factors limiting forage production to Ghana.
+
+ANIM 423: Micro-Livestock Production 
+The concept of microlivestock production. Bio-geographical and ecological factors in the use of microlivestock. The concept and consequences of domestication. Transportation and housing of new domesticates. Rabbit production. Grasscutter production. Apiculture. Snail production. 
+
+
+
+CROP 440: Research Project 
+In the final year, a BSc student in Crop Science must choose a topic for a research investigation directed at solving a specific plant science-related problem in consultation with a lecturer who becomes the student‘s supervisor. A bound dissertation describing this investigation must be presented to the Department before the final examinations begin. Although the research project is basically for training students in scientific research, it must be done conscientiously and the dissertation must contain all the elements of a publishable scientific paper. The course is spread over the first and second semesters.
+
+CROP 411: Field Crops 
+Origin, botany, distribution, adaptation, propagation, cultural practices, harvesting, utilization and post-harvest handling of tropical food crops including cereals, legumes, root and tuber crops and plantain. Other crops include beverages, oil, spice and fibre crops. Constraints to production and research needs. 
+
+CROP 422: Crop Entomology 
+A detailed study of the biology, economic importance and control of major and minor insect pests of Field, Plantain and Horticultural crops including vegetables: Emphasis would be placed on pests of the above crops both in the field and in storage. 
+
+CROP 423: Plant Pathology 
+Review of the major characteristics of the major pathogen groups; Introductory plant pathology, Development of disease in individual plants and plant population, plant disease triangle, disease cycle and relationship between disease cycle and epidermics in plants; pathogenic attack of plants-role of enzymes, toxins, growth regulators etc. in plant disease; effect of disease on plant metabolism; defence of plants against pathogens – the concept and basis of resistance; genetics of plant diseases, Diagnosis and assessment of plant disease. Some selected plant diseases and their control in Ghana – importance, symptomalogy, aetiology and control.
+
+CROP 425: Statistics for Agriculturists 
+Introduction to planning and execution of agricultural experiments. Principles of scientific experimentation. Statistical methods commonly used in agricultural research and experimental biology. Descriptive statistics. Normal ‘T’ and ‘F’ distributions and their uses. Experimental designs, analysis of variance, chi-square tests, simple correlation and regression. Factorial experiments. Introduction to multiple regression and non-parametric statistics. Emphasis will be on applications of these methods rather than on mathematical derivations. 
+
+CROP 426: Genetics and Plant Breeding 
+Introduction to evolutionary, population and quantitative genetics. Plant genetic resources. Reproductive systems in crop plants. The genetics basis and methods for breeding self-and cross-pollinated crops. Mutation breeding. Polyploidy. Inter-and intra-specific hybridization. Introduction to techniques of biotechnology utilized or with potential to be utilized in crop improvement.
+
+CROP 434: Fruit and Vegetable Crops 
+The fruit industry. Classification of fruit crops. Factors affecting fruit production. Establishment of an orchard: propagation and nursery practices and fruit crop management; fruit quality and marketing. Detailed knowledge of the botany. Physiology and production practices for citrus, banana, mango, avocado pear, cashew and pineapple. Minor fruit crops of Ghana. Importance of vegetable enterprises. Classification of vegetables. Factors affecting vegetable production in Ghana. The vegetable production process: site selection and soil preparation; fertilizers and plant nutrition; water sources; propagation practices; weed, pest and disease control. Vegetable cropping systems. General principles of harvesting, postharvest handling, marketing and storage of vegetables. Cultural practices involved in the production of major vegetable crops in Ghana. Research needs. 
+
+CROP 427: Seed Science and Technology 
+Biology of seeds – ontogeny, structure, storage, germination and storage behaviour. Principles and practices involved in the production, harvesting, processing, conditioning, storage, testing, quality management and use of agricultural seeds. Seed improvement, national seed laws, international seed institutions and regulations, seed industry policy and germplasm policy for Ghana. Developments in the international seed arena including patenting. Establishment and management of seed production as a business. 
+
+CROP 418: Plantation and Industrial Crops 
+Ecology, agronomy, physiology, production systems and research needs of major plantation crops in Ghana. Emphasis will be on cocoa, coffee, rubber, shea, sugarcane, oil palm, coconut, tobacco, cotton and citronella. Processing utilization and marketing potential. Prospects and problems of production.
+
+CROP 433: Molecular Biology 
+The nature of DNA nucleic acids. Replication of double stranded DNA. The Genetic code, Gene and Gene expression. Production of Recombinant DNA. The Polymerase Reaction. Cloning of prokaryotic and eukaryotic genomes. Genome libraries. Analysis of recombinants. Construction of transgenic plants, Application of DNA technology in agriculture.
+
+CROP 424: Plant Virology 
+History, classification and terminologies in virology. Virus structure, components of viruses. Isolation and characterization of viruses. Transmission of viruses. Life cycle of virus- synthesis and Genome replication of viruses. Virus entry, movement and assembly. Plant virus pathogenesis, cell damage and Host contribution to pathogenesis. Virus evolution, origin and divergence. Prevention and control of viral disease including plant defense agents. Practical sessions should include: Detection and assaying of plant viruses using host plants, serology and nucleic acid based techniques. Transmission of virus to test plants, symptomatology and Electron microscopy. 
+
+CROP 435: Environmental Horticulture 
+Landscape Design: History of garden and landscape design. Contemporary trends, types and elements of the landscapes. Objectives of landscaping. Conduction of a landscape survey and analysis of landscape survey data. Materials of design. Principles of design and Principles of landscape design. The functions and design of beds and borders, home gardens, open space, public parks and public gardens. Road, street and industrial landscaping. Landscape graphic techniques. Preparation of plans. The sequence of operations for Landscape projects. Preparation of costs and estimates. Landscape Horticulture: Importance of landscape plants in the environment. Selection of plants for landscaping. Establishment and maintenance of landscape trees, shrubs, climbing plants, hedges and shelter belts, bedding plants, lawns in gardens and parks, and aquatic plants in water gardens. Problems of landscape horticulture in Ghana. Establishment of landscape maintenance program.
+
+CROP 437: Pests and Diseases of Horticultural Crops 
+Overview of the concept of pests and diseases and development of pest and disease in plants. Disease diagnosis, assessment and general control of plant diseases. Study of the identification, damage, economic importance, symptoms and management of major insect pests and diseases of the following crops: (a) Vegetables: Tomato, Cabbage, Garden egg, Baby aubergines, Okra, Pepper, Onion, Water melon, Cucumber etc. (b) Fruit crops e.g. pineapple, mango, citrus, pawpaw, cashew. (c) Ornamental plants.
+
+FAPH 421: Postharvest Physiology 
+Definitions; developmental cycle of plants structure and composition of produce; physiology and biochemistry of produce toxicants; environmental factors affecting fruit quality. Postharvest treatment of commodities, fruit ripening, storage methods, Harvest indices, Fruit ripening- Ethylene and fruit ripening (temperature, moisture, relative humidity, light, insulation, irradiation); Physiological disorders, low temperature and mineral deficiency disorders; Commodity treatment (e.g. Controlled ripening and de-greening, sprout inhibitors, growth regulators –synthesis, measurement, mode of action, effects and sources, irradiation, ventilation, waxing, cooling, fungicide application, et); Quality assessment. 
+
+FAPH 422: Farm Structures and Environmental Control 
+Materials for building construction: wood, concrete, steel, aluminum, insulation, roofing, finishing materials. Structural design: systems, requirements, analysis. Functional planning: functional planning for storage structure, materials handling centres, machinery and shop buildings. Electrical, mechanical and utilities: electrical systems, heating and cooling, ventilation systems, water supply. Crop storage environment: thermal factors in crop storage, moisture in storage, gases in storage environment, radiation. Traditional structures-their advantages and disadvantages (durability, ventilation, insect infestation, RH, Temp etc.).
+
+FAPH 413: Storage Pests and Diseases, Their Prevention and Control 
+Identification of infestation and infection; Sources and causes of infestation and infection; Ecology of stored product insects, Life cycle of storage pests (arthropods, vertebrates and microorganisms); Monitoring techniques; Post-harvest diseases (nature, symptoms, causal agents, management); Factors influencing growth and development of storage pests and disease organisms; Isolation and preservation of storage pests and disease organisms; Mycotoxins (nature, causes, effects, prevention and control); food poisoning, food borne infections and toxicants; Prevention and control measures (physical, chemical, biological, attractants and repellents and other novel methods e.g. Integrated Animal and Crop Pest; Management - IACPM); Prevention of re-infestation and re-infection; Environmental hazards e.g. misapplication, misuse, disposal of agrochemicals. 
+
+FAPH 424: Processing and Preservation of Agricultural Produce 
+Principles, concepts, definitions and importance; Types of processing plants (primary, secondary, tertiary); Processing methods (e.g. drying, dehydration, blanching, canning, freezing etc); Processing equipment; Preservation methods (e.g. pickling, salting, fermentation, smoking, pasteurization, asepsis, irradiation); Processing of selected produce (small-scale, medium-scale, industrial-scale); Cereals and legumes (e.g. drying, milling); Roots and tubers (e.g. chipping, grating, drying, starch extraction, “garification”); Fruits (e.g. juice extraction) and vegetables (e.g. chopping, drying, pickling); Oil crops (e.g. oil extraction); Beverage crops (e.g. fermentation, drying etc); Fibre crops (e.g. retting); Medicinal and aromatic plants; Spices e.g. drying, milling etc); Herbs (e.g. drying, milling etc); Meat, dairy, poultry and fish; Byproduct utilization and management; Post-mortem changes in meat/poultry and fish; Food safety and hygiene; Plant hygiene and safety; Adulteration. 
+
+FAPH 415: Packaging and Environmental Issues in Post-harvest 
+Packaging (definition; effects of packaging on product quality, Principles and functions packaging; Containment (e.g. individual packing, jumble packing, pattern packs, cell packs); Protection against shock, vibration, static compression, external agents (e.g. insects); Apportionment/Convenience and Labeling; Communication; Packaging materials Cushioning materials and their properties; Packaging stations, equipment and machinery; safety and accident prevention; Pack houses; Public health and packaging Advertising and labelling; Environmental Issues; Environmental impact assessment; Waste disposal and management techniques: Incineration, Composting of waste agricultural products, Landfills (land reclamation), Biogas generation from waste products, Recycling of waste products, Pollution and remediation technologies, Agrochemicals; Consumer protection (e.g. production of goods, use of goods, second hand goods, sale of goods-guarantees, damages, trade description); Additives and contaminants; 
+
+FAPH 426: Marketing of Agricultural Produce, Food Laws and Legislation Introduction: Concepts and importance; Marketing evolution; Marketing systems; Market analysis; Theories of supply, demand and equilibrium pricing; Competition; Seasonal variation in supply; Marketing organizations and functions; Government policy; Product quality grading; Labelling, pricing and sales; Domestic and international markets; Marketing channels and international trade; GLOBAL GAP regulations; Introduction: Co-operative marketing strategies; Determination of import and export parity prices; Market efficiency; Legal aspects of marketing; Distribution and salesmanship: Food Standards, Laws and Legislation (definitions); Food standards, laws and legislation of local and international agencies e.g. GSB, WTO, SIAGLOBAL; Outreach programmes e.g. need for outreach programmes, use of appropriate extension tools to reach target groups (farmers, traders, processors, transporters, consumers, etc.).
+
+FAPH 417: Quality Assurance in Postharvest Technology 
+Scope of Quality Assurance; Good processing/manufacturing practice; Fish and fish products; Dairy products; Poultry products; Other meat products; Assessment methods: HACCP (hazard analysis, critical control point determination, critical limit determination, development of monitoring procedures, development of corrective action plan, development of record keeping procedures, verification procedures); ISO-9000 (standards for processing equipment, overview training, audit readiness, training for auditing, quality manual, sample procedures, Total Quality Management (TQM); Constraints to Quality Assurance in Ghana (lack of appropriate quality standards, ignorance of quality standards, poverty, commodity supply or availability, technical barriers (equipment and personnel), insufficient knowledge of market promotions, lack of consumer protection. Food laws and regulations (food legislation) Note: The concept of all quality issues should be related to specific agricultural commodities and products in an interdisciplinary approach. Reduction of cross contamination at the processing and consumer levels. Good agricultural and management practices at the primary level.
+
+FAPH 418: Micro Enterprise Development 
+Definition of micro enterprise, Classification of micro enterprise. Importance and role of micro enterprise to the socio-economic development of the country. Entrepreneurial theories, concepts, nature and need. Characteristics of a successful Entrepreneur (attitudes, skills, and competencies). Entrepreneurship development process; opportunity recognition, information search, resource mobilization, choice of enterprise size/location, launching the enterprise. Business Plan Development and implementation; components/elements of a business plan. Product development. Financial analysis (analysis of cash flow). Enterprise development opportunities in the Post-harvest chain; development of micro enterprises in storage/warehousing, transportation, value-added processing, packaging and labelling, sales and distribution, advertising, financing, manufacturing of tools and equipment for post-harvest services, processing services, etc; industrial profiles of major agricultural commodities (e.g. cassava, plantain, maize, coconut, yam, oil palm,).
+
+SOIL 400: Research Project and Seminar 
+A project to be carried out by the student under the supervision of senior member(s) of the Department. The student will be required to investigate in some depth a selected problem in soil science, environmental science or agronomy and present seminars and a dissertation in partial fulfillment of the requirements of the B.Sc. Agriculture degree. 
+
+SOIL 411: Soil Genesis, Quality and Land-Use Planning 
+Processes of soil formation, e.g., alkalization, podzolization, gleization, etc; Soil Taxonomic orders and their diagnostic horizons; Use of soil classification in soil management and extrapolation of agronomic research results; Soil survey and soil survey reports - scales and kinds of soil survey, soil mapping units, soil survey operations; Assessment of soil productivity; Soil quality evaluation; Environmental regulations of land; Land-use planning and its application in agriculture; Introduction to GIS (Geographic Information Systems).
+
+SOIL 412: Soil Biochemistry and Microbiology 
+Decomposition of organic residue in soils; Transformations of sulphur, iron, manganese in soils; Biochemical transformation of phosphorus, sulphur, hydrocarbons and pesticides; Decomposition of pesticides; Biological nitrogen fixation: symbiosis (including grain legumes, trees, Azolla, pasture/forage) and non-symbiosis; Legume bacteriology; Biochemistry of nitrogen fixation (symbiotic and non-symbiotic), methods of measuring biological nitrogen fixation (BNF), Inoculation, mycorrhiza; Methods of studying microbial ecology-antibiotic resistance and select-able markers, serology, gene typing and other methods of molecular biology; Biochemistry of nitrification, denitrification and nitrate reduction; Biochemical processes in the rhizosphere; Biochar and its influence on soil biochemical properties. 
+
+SOIL 413: Environmental Soil Physics II 
+Water content and water potential relationship: soil water content, soil water potential, soil moisture characteristic, concepts of field capacity, wilting point and plant available water; Movement of water through soils: Darcy’s law, flow through layered soils, continuity equation and non-steady state flow, Darcy-Richards equation; Nutrient transport and leaching; Soil temperature and heat: sinusoidal soil temperature equation, heat flow in soils, Fourier’s equation; Soil salinity: electrical conductivity, salinity effects on plant growth, drainage; Climatic factors affecting plant growth: radiation and energy balance, evapotranspiration, the soil water balance. 
+
+SOIL 414: Soil Chemistry and Fertility 
+Solid phase: Origin and distribution of charge on soil colloid surface, point of zero charge, electrical characteristics of soil/water interface, double layer theory; mechanism of cation and anion fixation in soils. Sulphur, aluminium, pyrite in the formation of soil acidity. Liquid phase: composition, concentration, activities and activity coefficients, Debye-Huckle theory; Chemical factors affecting plant growth: growth expressions, Mitscherlich’s law of diminishing returns, Liebig’s law of the minimum. Methods of evaluating soil fertility; principles of soil fertility management – fertilizer application, liming, lime requirement of soils, reactions of lime in soils. Management of acidic, saline and sodic soils. Soil and plant factors affecting N availability to plants, behavior of P fertilizers and their availability in soils.
+
+SOIL 415: Clay and Soil Material Science 
+Review of crystal chemistry and mineral structures: types and properties of bonding; Structural classification of soil minerals; Minerals in soil environments, origin and chemical composition; Clay minerals: low activity and high activity clays, genesis and properties; Mineral separation and identification: fractionation and analytical methods; Common economic earth minerals in Ghana: bauxite, iron ore, manganese oxide, salts, limestone, calcium carbonate, kaolin; Economic uses of clay and soil minerals: functional properties, uses in industry, agriculture and environmental management. 
+
+SOIL 416: Remediation of Contaminated Soils 
+Components of petroleum (mixture of aliphatic, alicyclic and aromatic hydrocarbons); Microbial metabolism (aerobic alkane metabolism, aerobic PAH metabolism, anaerobic hydrocarbon metabolism); behavioral and physiological responses of microbes to hydrocarbon, microbial community dynamics; microbial treatment of petroleum waste (treatment of contaminated soils and sludges, factors affecting bioremediation, passive bioremediation process, land farming on oily waste, bio-reactor based process, biofiltration of volatile organic compounds, removal of hydrogen sulphides and sulphates, chemical methods of bioremediation of oily wastes). Microbial processes for recovery and upgrading petroleum (microbial enhanced oil recovery, microbial de-emulsification, microbial desulfurization, microbial denitrogenation, enzymatic upgradation of petroleum fractions and pure hydrocarbon); bacterial biosensors. Microbial and chemical techniques to reclaim contaminated soils. Effect of chemicals and pollutants on microbial population, basic principles governing bio-degradation, bio-transformation reactions.
+
+SOIL 418: Introduction to Agricultural Systems and Analysis Simulation 
+Systems dynamics: definition, types of systems, causal and flow diagrams. Properties and behaviour of systems: hierarchy, feedbacks, stability and chaos; Simulation and modelling of agricultural systems: methods of model construction, validating models, sensitivity analysis, models of population growth, predator-prey systems; Modelling soil and plant growth processes: carbon and nitrogen dynamics, nutrient uptake by plants, nutrient leaching, plant growth and development; Modelling pasture and animal systems. Demonstration of some soil/crop models e.g. QUEFTS and NuMAS, etc. 
+
+SOIL 419: Introduction to Paleopedology 
+This course introduces students to some fundamentals concepts of paleopedology. The topics include: Conceptual background; geological history of the earth: geological time-scale; geological formations of Ghana. Relative and absolute dating. phytolith analysis: History of phytolith research, production, deposition and dissolution of phytolith, phytolith morphology, field techniques and research design, interpretation of phytolith assemblages, the role of phytoliths in paleo-environmental reconstruction; Economic importance of phytoliths.
