@@ -91,10 +91,6 @@ export const footerData = {
     title: 'UG School of Agriculture Student Hub',
     subtitle: 'Empowering the next generation of agricultural innovators at the University of Ghana School of Agriculture.',
     subtext: 'Cultivating knowledge. Growing leaders. Transforming agriculture.',
-    links: [
-        { id: 'home', label: 'Home', href: '/' },
-        { id: 'dashboard', label: 'Dashboard', href: '/dashboard/100' }
-    ],
     copyright: 'University of Ghana, Legon'
 };
 

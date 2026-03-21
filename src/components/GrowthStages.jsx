@@ -133,14 +133,14 @@ const GrowthStages = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45 }}
-                className="max-w-7xl mx-auto mb-8 md:mb-10 text-center flex flex-col md:flex-col md:block gap-4 md:gap-0"
+                className="max-w-7xl mx-auto mb-8 md:mb-10 text-center flex flex-col gap-4"
             >
-                <div className="bg-[rgba(27,67,50,0.45)] md:bg-[rgba(0,0,0,0.2)] border border-white/10 md:border-white/12 rounded-2xl md:rounded-2xl px-6 md:px-6 py-4 md:py-4 inline-block md:inline-block">
-                    <h2 className="text-3xl md:text-5xl font-bold text-[#1B4332] md:text-[#00592D] tracking-tight font-family-gelasio">
+                <div className="bg-white/85 md:bg-white/80 border border-white/20 rounded-full px-6 md:px-8 py-3 md:py-4 inline-block mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[#00592D] tracking-tight font-family-gelasio">
                         Choose Your Academic Level
                     </h2>
                 </div>
-                <p className="bg-[rgba(27,67,50,0.45)] md:bg-[rgba(0,0,0,0.2)] border border-white/10 md:border-white/12 rounded-2xl md:rounded-2xl px-6 md:px-6 py-4 md:py-4 mt-3 md:mt-3 text-[#1B4332] md:text-gray-600 text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-bold font-family-gelasio">
+                <p className="bg-white/85 md:bg-white/80 border border-white/20 rounded-full px-6 md:px-8 py-3 md:py-4 text-gray-700 md:text-gray-700 text-base md:text-lg max-w-3xl mx-auto leading-relaxed font-family-gelasio">
                     This is your gateway into the student portal. Select your level to unlock resources,
                     tools, and support tailored to your academic journey.
                 </p>

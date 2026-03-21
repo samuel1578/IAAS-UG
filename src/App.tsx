@@ -5,6 +5,7 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import AuthPage from './pages/AuthPage';
+import ScrollToTop from './components/ScrollToTop';
 
 // Protected Route Component
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -94,6 +95,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <AnimatedRoutes />
       </Router>
     </AuthProvider>

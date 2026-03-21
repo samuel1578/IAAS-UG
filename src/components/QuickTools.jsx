@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { MdDescription, MdMap, MdCalendarMonth, MdCloudQueue } from 'react-icons/md';
 import Card from './Card';
 import { getActiveQuickTools } from '../data/homeData';
-import agricLogo from '../assets/lln.jpeg';
+import eseImage from '../assets/ese.png';
+import sankofaImage from '../assets/sankofa.png';
+import neaImage from '../assets/nea.png';
 
 const iconMap = {
     description: MdDescription,
@@ -47,10 +49,24 @@ const QuickTools = ({ tools }) => {
         <section className="relative py-16 px-6 overflow-hidden bg-[linear-gradient(180deg,#f5f7f6_0%,#eef3f0_100%)]">
             <div className="absolute -top-24 -right-14 h-52 w-52 rounded-full bg-[#00592D]/6 blur-3xl pointer-events-none" />
             <div className="absolute -bottom-24 -left-14 h-52 w-52 rounded-full bg-[#F2A900]/10 blur-3xl pointer-events-none" />
+            {/* Left: Nea Image */}
+            {/* Left: Nea Image */}
             <img
-                src={agricLogo}
-                alt="UG School of Agriculture logo"
-                className="absolute top-6 right-4 md:top-8 md:right-8 lg:right-10 w-16 md:w-24 lg:w-28 h-auto object-contain z-20"
+                src={neaImage}
+                alt="Nea"
+                className="hidden lg:block absolute top-0 right-96 w-40 h-auto object-contain z-10 opacity-90"
+            />
+            {/* Center: Sankofa Image */}
+            <img
+                src={sankofaImage}
+                alt="Sankofa"
+                className="hidden lg:block absolute top-0 right-44 w-40 h-auto object-contain z-10 opacity-90"
+            />
+            {/* Right: ESE Image */}
+            <img
+                src={eseImage}
+                alt="ESE"
+                className="hidden lg:block absolute top-0 right-8 w-40 h-auto object-contain z-10 opacity-90"
             />
 
             <div className="relative z-10 max-w-7xl mx-auto">
