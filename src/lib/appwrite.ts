@@ -629,24 +629,40 @@ export class MaterialService {
   }
 
   // Get download link for a file
-  static async getDownloadLink(fileId: string) {
+  static getDownloadLink(fileId: string) {
     try {
-      const url = storage.getFileDownload(APPWRITE_CONFIG.bucketId, fileId);
-      return { success: true, url };
+      // If fileId is a full URL, extract the actual file ID
+      let actualFileId = fileId;
+      if (fileId.includes('/storage/buckets/')) {
+        const parts = fileId.split('/');
+        const filesIndex = parts.indexOf('files');
+        if (filesIndex !== -1 && parts.length > filesIndex + 1) {
+          actualFileId = parts[filesIndex + 1];
+        }
+      }
+      return storage.getFileDownload(APPWRITE_CONFIG.bucketId, actualFileId);
     } catch (error: any) {
       console.error('Get download link error:', error);
-      return { success: false, error: error.message };
+      return null;
     }
   }
 
   // Get preview URL for a file
-  static async getPreviewLink(fileId: string) {
+  static getPreviewLink(fileId: string) {
     try {
-      const url = storage.getFilePreview(APPWRITE_CONFIG.bucketId, fileId);
-      return { success: true, url };
+      // If fileId is a full URL, extract the actual file ID
+      let actualFileId = fileId;
+      if (fileId.includes('/storage/buckets/')) {
+        const parts = fileId.split('/');
+        const filesIndex = parts.indexOf('files');
+        if (filesIndex !== -1 && parts.length > filesIndex + 1) {
+          actualFileId = parts[filesIndex + 1];
+        }
+      }
+      return storage.getFilePreview(APPWRITE_CONFIG.bucketId, actualFileId);
     } catch (error: any) {
       console.error('Get preview link error:', error);
-      return { success: false, error: error.message };
+      return null;
     }
   }
 

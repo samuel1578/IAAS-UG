@@ -149,27 +149,33 @@ const CourseDetailsModal = ({ course, isOpen, onClose }) => {
                                                         {materialType.charAt(0).toUpperCase() + materialType.slice(1)}
                                                     </h4>
                                                     <div className="space-y-2">
-                                                        {items.map((material) => (
-                                                            <div key={material.$id} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition">
-                                                                <div className="flex-1 min-w-0">
-                                                                    <p className="font-medium text-gray-800 truncate">{material.title}</p>
-                                                                    {material.description && (
-                                                                        <p className="text-sm text-gray-600 truncate">{material.description}</p>
+                                                        {items.map((material) => {
+                                                            const downloadUrl = MaterialService.getDownloadLink(material.fileUrl);
+                                                            return (
+                                                                <div key={material.$id} className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition">
+                                                                    <div className="flex-1 min-w-0">
+                                                                        <p className="font-medium text-gray-800 truncate">{material.title}</p>
+                                                                        {material.description && (
+                                                                            <p className="text-sm text-gray-600 truncate">{material.description}</p>
+                                                                        )}
+                                                                        <p className="text-xs text-gray-500 mt-1">
+                                                                            Uploaded: {new Date(material.uploadedDate).toLocaleDateString()}
+                                                                        </p>
+                                                                    </div>
+                                                                    {downloadUrl && (
+                                                                        <a
+                                                                            href={downloadUrl.toString()}
+                                                                            target="_blank"
+                                                                            rel="noopener noreferrer"
+                                                                            className="ml-4 flex items-center gap-2 px-3 py-2 bg-[#00592D] hover:bg-[#004620] text-white rounded-lg transition-colors text-sm font-medium shrink-0"
+                                                                        >
+                                                                            <MdDownload className="w-4 h-4" />
+                                                                            Download
+                                                                        </a>
                                                                     )}
-                                                                    <p className="text-xs text-gray-500 mt-1">
-                                                                        Uploaded: {new Date(material.uploadedDate).toLocaleDateString()}
-                                                                    </p>
                                                                 </div>
-                                                                <a
-                                                                    href={`${APPWRITE_CONFIG.endpoint}/storage/buckets/${APPWRITE_CONFIG.bucketId}/files/${material.fileUrl}/download`}
-                                                                    download
-                                                                    className="ml-4 flex items-center gap-2 px-3 py-2 bg-[#00592D] hover:bg-[#004620] text-white rounded-lg transition-colors text-sm font-medium shrink-0"
-                                                                >
-                                                                    <MdDownload className="w-4 h-4" />
-                                                                    Download
-                                                                </a>
-                                                            </div>
-                                                        ))}
+                                                            );
+                                                        })}
                                                     </div>
                                                 </div>
                                             ))}

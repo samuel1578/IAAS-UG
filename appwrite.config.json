@@ -1,0 +1,372 @@
+{
+    "organizationId": "6a52988710078bf30fbd",
+    "projectId": "6a5298ae00025336f799",
+    "projectName": "IAAS-UG",
+    "endpoint": "https://syd.cloud.appwrite.io/v1",
+    "tablesDB": [
+        {
+            "$id": "iaas_ug",
+            "name": "iaas_ug",
+            "enabled": true
+        }
+    ],
+    "tables": [
+        {
+            "$id": "users",
+            "name": "users",
+            "databaseId": "iaas_ug",
+            "enabled": true,
+            "rowSecurity": true,
+            "$permissions": [
+                "read(\"any\")",
+                "create(\"users\")",
+                "update(\"team:admins\")",
+                "delete(\"team:admins\")"
+            ],
+            "columns": [
+                {
+                    "key": "email",
+                    "type": "string",
+                    "format": "email",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "name",
+                    "type": "varchar",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "level",
+                    "type": "varchar",
+                    "size": 10,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "studentId",
+                    "type": "integer",
+                    "required": true,
+                    "default": null,
+                    "min": 0,
+                    "max": 99999999
+                },
+                {
+                    "key": "department",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "Bsc_Agricultural_Science",
+                        "Bsc_Food_and_Consumer_Science"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "phoneNumber",
+                    "type": "integer",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "isVerified",
+                    "type": "boolean",
+                    "required": false,
+                    "default": false
+                },
+                {
+                    "key": "isAdmin",
+                    "type": "boolean",
+                    "required": false,
+                    "default": false
+                },
+                {
+                    "key": "profileStatus",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "pending",
+                        "approved",
+                        "rejected"
+                    ],
+                    "size": 255,
+                    "required": false,
+                    "default": "pending"
+                },
+                {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true,
+                    "default": null
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "email_unique",
+                    "type": "unique",
+                    "columns": [
+                        "email"
+                    ]
+                },
+                {
+                    "key": "status_idx",
+                    "type": "key",
+                    "columns": [
+                        "profileStatus"
+                    ]
+                },
+                {
+                    "key": "verified_idx",
+                    "type": "key",
+                    "columns": [
+                        "isVerified"
+                    ]
+                },
+                {
+                    "key": "dept_idx",
+                    "type": "key",
+                    "columns": [
+                        "department"
+                    ]
+                }
+            ]
+        },
+        {
+            "$id": "highlights",
+            "name": "highlights",
+            "databaseId": "iaas_ug",
+            "enabled": true,
+            "rowSecurity": false,
+            "$permissions": [
+                "read(\"any\")",
+                "create(\"users\")",
+                "update(\"team:admins\")",
+                "delete(\"team:admins\")"
+            ],
+            "columns": [
+                {
+                    "key": "userId",
+                    "type": "varchar",
+                    "size": 36,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "studentName",
+                    "type": "varchar",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "level",
+                    "type": "varchar",
+                    "size": 10,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "message",
+                    "type": "varchar",
+                    "size": 1000,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "status",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "pending",
+                        "approved",
+                        "rejected"
+                    ],
+                    "size": 255,
+                    "required": false,
+                    "default": "pending"
+                },
+                {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "approvedBy",
+                    "type": "varchar",
+                    "size": 36,
+                    "required": false
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "status_idx",
+                    "type": "key",
+                    "columns": [
+                        "status"
+                    ]
+                },
+                {
+                    "key": "created_idx",
+                    "type": "key",
+                    "columns": [
+                        "createdAt"
+                    ],
+                    "orders": [
+                        "DESC"
+                    ]
+                }
+            ]
+        },
+        {
+            "$id": "materials",
+            "name": "materials",
+            "databaseId": "iaas_ug",
+            "enabled": true,
+            "rowSecurity": false,
+            "$permissions": [
+                "read(\"any\")",
+                "create(\"team:admins\")",
+                "update(\"team:admins\")",
+                "delete(\"team:admins\")"
+            ],
+            "columns": [
+                {
+                    "key": "courseCode",
+                    "type": "varchar",
+                    "size": 20,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "level",
+                    "type": "integer",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "semester",
+                    "type": "integer",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "year",
+                    "type": "integer",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "materialType",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "lecture slides",
+                        "notes",
+                        "assignments",
+                        "recordings"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "title",
+                    "type": "varchar",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "description",
+                    "type": "varchar",
+                    "size": 1000,
+                    "required": false
+                },
+                {
+                    "key": "fileUrl",
+                    "type": "varchar",
+                    "size": 36,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "uploadedBy",
+                    "type": "varchar",
+                    "size": 36,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "uploadedDate",
+                    "type": "datetime",
+                    "required": true,
+                    "default": null
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "course_idx",
+                    "type": "key",
+                    "columns": [
+                        "courseCode"
+                    ]
+                },
+                {
+                    "key": "type_idx",
+                    "type": "key",
+                    "columns": [
+                        "materialType"
+                    ]
+                },
+                {
+                    "key": "date_idx",
+                    "type": "key",
+                    "columns": [
+                        "uploadedDate"
+                    ],
+                    "orders": [
+                        "DESC"
+                    ]
+                }
+            ]
+        }
+    ],
+    "buckets": [
+        {
+            "$id": "materials_bucket",
+            "name": "Course Materials",
+            "enabled": true,
+            "$permissions": [
+                "read(\"any\")",
+                "create(\"team:admins\")",
+                "update(\"team:admins\")",
+                "delete(\"team:admins\")"
+            ],
+            "fileSecurity": true,
+            "maximumFileSize": 104857600,
+            "allowedFileExtensions": [
+                "pdf",
+                "pptx",
+                "mp4",
+                "docx",
+                "jpg",
+                "png",
+                "xlsx"
+            ],
+            "compression": "none",
+            "encryption": true,
+            "antivirus": true
+        }
+    ],
+    "teams": [
+        {
+            "$id": "admins",
+            "name": "Admins"
+        }
+    ]
+}
