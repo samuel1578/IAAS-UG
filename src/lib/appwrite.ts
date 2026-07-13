@@ -110,8 +110,19 @@ export class AuthService {
           }
         );
       } catch (profileError: any) {
-        console.error('Profile creation failed during signup:', profileError);
-        throw new Error(`Profile creation failed: ${profileError.message}`);
+        console.error('Profile creation failed during signup. Attempting cleanup...', profileError);
+
+        // Attempt to clean up orphaned account
+        try {
+          // To delete the account we just created via Client SDK, we need a session.
+          await account.createEmailPasswordSession(userData.email, userData.password);
+          await account.delete();
+          console.log('Cleanup successful: Orphaned account deleted.');
+        } catch (cleanupError) {
+          console.error('Cleanup failed: Could not delete orphaned account.', cleanupError);
+        }
+
+        throw new Error(`Profile creation failed: ${profileError.message}. Please try again with correct data.`);
       }
 
       // Auto login after signup
@@ -245,21 +256,22 @@ export class AuthService {
     );
   }
 
-  // Ensure profile exists; if missing (404), create it on the fly
+  // Ensure profile exists
   static async ensureUserProfile(user: any) {
     const profileResult = await this.getUserProfile(user.$id);
     if (profileResult.success) {
       return profileResult;
     }
 
+    // If profile is missing (404), do NOT auto-create a fake one.
+    // Return a specific status so the UI can handle the incomplete profile state.
     if (profileResult.errorCode === 404) {
-      try {
-        const created = await this.createUserProfileFromAccount(user);
-        return { success: true, profile: created as StudentUser };
-      } catch (createError: any) {
-        console.error('Self-heal profile creation failed:', createError);
-        return { success: false, error: createError.message };
-      }
+      return {
+        success: false,
+        error: 'Profile document missing',
+        errorCode: 404,
+        needsProfile: true
+      };
     }
 
     return profileResult;
@@ -538,14 +550,21 @@ export class MaterialService {
     uploadedBy: string,
     level: number,
     semester: number,
-    year: number
+    year: number,
+    onProgress?: (progress: number) => void
   ) {
     try {
       // Upload file to storage
       const uploadedFile = await storage.createFile(
         APPWRITE_CONFIG.bucketId,
         ID.unique(),
-        file
+        file,
+        undefined,
+        (progress) => {
+          if (onProgress) {
+            onProgress(Math.round(progress.progress));
+          }
+        }
       );
 
       // Create material metadata in database
@@ -677,6 +696,85 @@ export class MaterialService {
       return { success: true, materials: result.documents as CourseMaterial[] };
     } catch (error: any) {
       console.error('Get all materials error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+}
+
+// Course Catalog functions
+export interface Course {
+  $id?: string;
+  code: string;
+  title: string;
+  credits: number;
+  type: string;
+  semester: number;
+  level: number;
+  description: string;
+  prerequisites: string[];
+  specialization: string[];
+}
+
+export class CourseService {
+  // Get all courses for a specific level + semester
+  static async getCoursesByLevelAndSemester(level: number, semester: number) {
+    try {
+      const result = await databases.listDocuments(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.coursesCollectionId,
+        [Query.equal('level', level), Query.equal('semester', semester)]
+      );
+      return { success: true, courses: result.documents as Course[] };
+    } catch (error: any) {
+      console.error('Get courses by level/semester error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Create a new course (document ID = course code)
+  static async createCourse(courseData: Omit<Course, '$id'>) {
+    try {
+      const course = await databases.createDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.coursesCollectionId,
+        ID.custom(courseData.code),
+        courseData,
+        ['read("any")']
+      );
+      return { success: true, course: course as Course };
+    } catch (error: any) {
+      console.error('Create course error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Update an existing course
+  static async updateCourse(documentId: string, courseData: Omit<Course, '$id'>) {
+    try {
+      const course = await databases.updateDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.coursesCollectionId,
+        documentId,
+        courseData
+      );
+      return { success: true, course: course as Course };
+    } catch (error: any) {
+      console.error('Update course error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Delete a course
+  static async deleteCourse(documentId: string) {
+    try {
+      await databases.deleteDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.coursesCollectionId,
+        documentId
+      );
+      return { success: true };
+    } catch (error: any) {
+      console.error('Delete course error:', error);
       return { success: false, error: error.message };
     }
   }

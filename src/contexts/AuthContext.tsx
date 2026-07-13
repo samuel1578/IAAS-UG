@@ -45,10 +45,14 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       if (userResult.success && userResult.user) {
         setUser(userResult.user);
 
-        // Ensure user profile exists (self-heal if missing)
+        // Ensure user profile exists
         const profileResult = await AuthService.ensureUserProfile(userResult.user);
         if (profileResult.success) {
           setUserProfile(profileResult.profile as StudentUser);
+        } else if (profileResult.needsProfile) {
+          console.warn('User has no profile document. Redirect to profile completion may be required.');
+          // We set profile to null to indicate it's missing
+          setUserProfile(null);
         }
 
         // Check admin status
@@ -70,10 +74,12 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       if (result.success) {
         setUser(result.user);
 
-        // Ensure user profile exists (self-heal if missing)
+        // Ensure user profile exists
         const profileResult = await AuthService.ensureUserProfile(result.user);
         if (profileResult.success) {
           setUserProfile(profileResult.profile as StudentUser);
+        } else if (profileResult.needsProfile) {
+          setUserProfile(null);
         }
 
         // Check admin status

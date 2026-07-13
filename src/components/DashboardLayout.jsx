@@ -14,7 +14,9 @@ import {
   MdExpandMore,
   MdLogout,
   MdPerson,
-  MdSettings
+  MdSettings,
+  MdAnalytics,
+  MdLibraryBooks
 } from 'react-icons/md';
 import { FaCloudSunRain, FaTemperatureHigh, FaTint } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
@@ -39,15 +41,22 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
   ];
 
   const adminMenuItems = [
-    { id: 'admin', label: 'Admin Dashboard', mobileLabel: 'Dashboard', icon: MdDashboard }
+    { id: 'academic', label: 'Academic Hub', mobileLabel: 'Academic', icon: MdBook },
+    { id: 'users', label: 'User Management', mobileLabel: 'Users', icon: MdPeople },
+    { id: 'analytics', label: 'Analytics', mobileLabel: 'Analytics', icon: MdAnalytics },
+    { id: 'settings', label: 'Settings', mobileLabel: 'Settings', icon: MdSettings },
+    { id: 'catalog', label: 'Course Catalog', mobileLabel: 'Catalog', icon: MdLibraryBooks },
   ];
 
-  const menuItems = isAdmin ? [...baseMenuItems, ...adminMenuItems] : baseMenuItems;
+  const menuItems = isAdmin ? adminMenuItems : baseMenuItems;
 
-  const mobilePrimaryTabs = menuItems.filter((item) => ['academic', 'map', 'faculty'].includes(item.id));
-  const mobileOverflowTabs = menuItems.filter((item) =>
-    !['academic', 'map', 'faculty'].includes(item.id)
-  );
+  const mobilePrimaryTabs = isAdmin
+    ? menuItems.slice(0, 3)
+    : menuItems.filter((item) => ['academic', 'map', 'faculty'].includes(item.id));
+
+  const mobileOverflowTabs = isAdmin
+    ? menuItems.slice(3)
+    : menuItems.filter((item) => !['academic', 'map', 'faculty'].includes(item.id));
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] lg:bg-transparent">
@@ -251,17 +260,19 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
             );
           })}
 
-          <button
-            type="button"
-            onClick={() => setShowMoreMenu(true)}
-            className={`flex flex-col items-center justify-center gap-1 py-2.5 border-t-2 transition-colors ${showMoreMenu || mobileOverflowTabs.some((item) => item.id === activeModule)
-              ? 'border-[#00592D] text-[#00592D]'
-              : 'border-transparent text-gray-500 hover:text-[#00592D]'
-              }`}
-          >
-            <MdMoreHoriz className="w-5 h-5" />
-            <span className="text-sm font-semibold leading-none">More</span>
-          </button>
+          {(!isAdmin || mobileOverflowTabs.length > 0) && (
+            <button
+              type="button"
+              onClick={() => setShowMoreMenu(true)}
+              className={`flex flex-col items-center justify-center gap-1 py-2.5 border-t-2 transition-colors ${showMoreMenu || mobileOverflowTabs.some((item) => item.id === activeModule)
+                ? 'border-[#00592D] text-[#00592D]'
+                : 'border-transparent text-gray-500 hover:text-[#00592D]'
+                }`}
+            >
+              <MdMoreHoriz className="w-5 h-5" />
+              <span className="text-sm font-semibold leading-none">More</span>
+            </button>
+          )}
         </div>
       </nav>
 

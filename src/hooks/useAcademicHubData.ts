@@ -1,4 +1,19 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
+import { Query } from 'appwrite';
+import { databases, APPWRITE_CONFIG } from '../lib/appwrite';
+
+export interface Course {
+    id: string;
+    code: string;
+    title: string;
+    credits: number;
+    type: string;
+    semester: number;
+    level: number;
+    description: string;
+    prerequisites: string[];
+    specialization: string[];
+}
 
 export const mockCoursesData = {
     100: {
@@ -412,19 +427,58 @@ export const useAcademicHubData = (userLevel: number) => {
     const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
     const [showCourseDetails, setShowCourseDetails] = useState(false);
 
-    const availableCourses = useMemo(() => {
-        const levelData = mockCoursesData[userLevel as keyof typeof mockCoursesData];
-        return levelData?.[semester] || [];
+    const [availableCourses, setAvailableCourses] = useState<Course[]>([]);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        let cancelled = false;
+        setIsLoading(true);
+        setError(null);
+
+        databases
+            .listDocuments(APPWRITE_CONFIG.databaseId, APPWRITE_CONFIG.coursesCollectionId, [
+                Query.equal('level', userLevel),
+                Query.equal('semester', semester),
+            ])
+            .then((response) => {
+                if (cancelled) return;
+                const mapped: Course[] = response.documents.map((doc) => ({
+                    id: doc.code,
+                    code: doc.code,
+                    title: doc.title,
+                    credits: doc.credits,
+                    type: doc.type,
+                    semester: doc.semester,
+                    level: doc.level,
+                    description: doc.description,
+                    prerequisites: doc.prerequisites ?? [],
+                    specialization: doc.specialization ?? [],
+                }));
+                setAvailableCourses(mapped);
+                setIsLoading(false);
+            })
+            .catch((err: unknown) => {
+                if (cancelled) return;
+                setError(err instanceof Error ? err.message : 'Failed to load courses');
+                setIsLoading(false);
+            });
+
+        return () => {
+            cancelled = true;
+        };
     }, [userLevel, semester]);
 
     const filteredCourses = useMemo(() => {
         if (userLevel < 300) return availableCourses;
         if (!specialization) return availableCourses;
-        return availableCourses;
+        return availableCourses.filter(
+            (c) => c.specialization.length === 0 || c.specialization.includes(specialization)
+        );
     }, [availableCourses, specialization, userLevel]);
 
     const selectedCourse = useMemo(() => {
-        return availableCourses.find(c => c.id === selectedCourseId) || null;
+        return availableCourses.find((c) => c.id === selectedCourseId) || null;
     }, [availableCourses, selectedCourseId]);
 
     return {
@@ -441,6 +495,8 @@ export const useAcademicHubData = (userLevel: number) => {
         availableCourses: filteredCourses,
         selectedCourse,
         needsSpecializationSelection: userLevel >= 300 && !specialization,
-        canToggleSemester: true
+        canToggleSemester: true,
+        isLoading,
+        error,
     };
 };

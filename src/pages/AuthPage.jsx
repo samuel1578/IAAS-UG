@@ -26,15 +26,15 @@ const AuthPage = () => {
     department: ''
   });
 
-  const { signIn, signUp, user } = useAuth();
+  const { signIn, signUp, user, userProfile } = useAuth();
   const navigate = useNavigate();
 
   // Redirect to dashboard if already authenticated
   useEffect(() => {
-    if (user) {
-      navigate(`/dashboard/${user.level || 100}`);
+    if (user && userProfile) {
+      navigate(`/dashboard/${userProfile.level || 100}`);
     }
-  }, [user, navigate]);
+  }, [user, userProfile, navigate]);
 
   const departments = [
     'Bsc_Agricultural_Science',
@@ -79,7 +79,14 @@ const AuthPage = () => {
 
     setLoading(true);
     try {
-      const result = await signUp(formData);
+      // Coerce numeric types before sending to API
+      const signupData = {
+        ...formData,
+        studentId: parseInt(formData.studentId, 10),
+        phoneNumber: parseInt(formData.phoneNumber, 10)
+      };
+
+      const result = await signUp(signupData);
       if (result.success) {
         alert('Registration successful! Please wait for admin approval before you can access the dashboard.');
         navigate('/');
@@ -103,8 +110,7 @@ const AuthPage = () => {
     try {
       const result = await signIn(formData.email, formData.password);
       if (result.success) {
-        // Navigate to appropriate level - will redirect automatically via useEffect
-        navigate(`/dashboard/${result.user?.level || 100}`);
+        // Redirection will be handled by the useEffect watching user and userProfile
       } else {
         const errorMsg = result.error || 'Login failed';
         // Handle specific session errors gracefully

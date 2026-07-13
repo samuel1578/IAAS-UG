@@ -7,30 +7,37 @@ import LabLogbook from '../components/modules/LabLogbook';
 import CampusMap from '../components/modules/CampusMap';
 import Faculty from '../components/modules/Faculty';
 import SRCNoticeboard from '../components/modules/SRCNoticeboard';
-import AdminDashboard from '../components/admin/AdminDashboard';
+import CourseMaterialsNavigator from '../components/admin/CourseMaterialsNavigator';
+import CourseCatalogManager from '../components/admin/CourseCatalogManager';
+import UserManagement from '../components/admin/UserManagement';
+import AnalyticsPanel from '../components/admin/AnalyticsPanel';
+import SettingsPanel from '../components/admin/SettingsPanel';
 import { useAuth } from '../contexts/AuthContext';
 import desktopHero from '../assets/newhor.jpg';
 import mobileHero from '../assets/mobbar.jpg';
 
 const Dashboard = ({ highlights, onApproveHighlight, onRejectHighlight, removeHighlight }) => {
   const { level } = useParams();
-  const { user } = useAuth();
+  const { user, isAdmin } = useAuth();
   const [activeModule, setActiveModule] = useState('academic');
 
   const renderModule = () => {
-    const moduleVariants = {
-      initial: { opacity: 0, y: 20 },
-      animate: { opacity: 1, y: 0 },
-      exit: { opacity: 0, y: -20 }
-    };
-
     const modules = {
-      academic: <AcademicHub level={level} />,
+      academic: isAdmin ? <CourseMaterialsNavigator /> : <AcademicHub level={level} />,
       logbook: <LabLogbook />,
       map: <CampusMap />,
       faculty: <Faculty />,
       noticeboard: <SRCNoticeboard />,
-      admin: <AdminDashboard />
+      users: <UserManagement />,
+      analytics: <AnalyticsPanel />,
+      settings: <SettingsPanel />,
+      catalog: <CourseCatalogManager />
+    };
+
+    const moduleVariants = {
+      initial: { opacity: 0, y: 20 },
+      animate: { opacity: 1, y: 0 },
+      exit: { opacity: 0, y: -20 }
     };
 
     return (
