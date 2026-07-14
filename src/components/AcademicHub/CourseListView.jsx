@@ -1,12 +1,36 @@
 import { motion } from 'framer-motion';
 import CourseCard from './CourseCard';
+import SkeletonCard from '../skeletons/SkeletonCard';
 
 const CourseListView = ({
     courses,
     expandedCourse,
     onExpandCourse,
     onSelectCourse,
+    isLoading = false,
+    error = null,
 }) => {
+    // Error takes priority: something went wrong fetching this selection.
+    if (error) {
+        return (
+            <div className="px-4 py-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
+                Couldn't load courses — please try again.
+            </div>
+        );
+    }
+
+    // Loading: show skeleton placeholders in the same vertical stack (space-y-3)
+    // the real course cards use, so there's no layout shift when data arrives.
+    if (isLoading) {
+        return (
+            <div className="space-y-3" aria-hidden="true">
+                {Array.from({ length: 5 }).map((_, index) => (
+                    <SkeletonCard key={index} lines={2} />
+                ))}
+            </div>
+        );
+    }
+
     if (courses.length === 0) {
         return (
             <motion.div

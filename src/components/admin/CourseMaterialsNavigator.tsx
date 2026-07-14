@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MdArrowBack, MdFileUpload, MdLibraryBooks, MdSchool, MdCalendarToday, MdVisibility, MdSettings } from 'react-icons/md';
+import { MdArrowBack, MdFileUpload, MdLibraryBooks, MdSchool, MdVisibility, MdSettings } from 'react-icons/md';
 import MaterialUploadForm from './MaterialUploadForm';
 import CourseDetailsModal from '../AcademicHub/CourseDetailsModal';
+import firstSemImage from '../../assets/firstsem.webp';
+import secondSemImage from '../../assets/secondsem.webp';
 
 const CourseMaterialsNavigator: React.FC = () => {
     const [mode, setMode] = useState<'manage' | 'preview' | null>(null);
@@ -179,21 +181,50 @@ const CourseMaterialsNavigator: React.FC = () => {
                         exit={{ opacity: 0, x: -20 }}
                         className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto"
                     >
-                        {semesters.map((sem) => (
-                            <button
-                                key={sem}
-                                onClick={() => handleSemesterSelect(sem)}
-                                className="group p-8 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#F2A900] transition-all text-center"
-                            >
-                                <div className="w-16 h-16 bg-[#FFF8E1] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#F2A900] transition-colors">
-                                    <MdCalendarToday className="w-8 h-8 text-[#F2A900] group-hover:text-white" />
-                                </div>
-                                <h3 className="text-xl font-bold text-gray-800">Semester {sem}</h3>
-                                <p className="text-sm text-gray-500 mt-2">
-                                    {mode === 'preview' ? 'Preview' : 'Manage'} semester {sem}
-                                </p>
-                            </button>
-                        ))}
+                        {semesters.map((sem) => {
+                            if (sem === 1) {
+                                return (
+                                    <button
+                                        key={sem}
+                                        onClick={() => handleSemesterSelect(sem)}
+                                        className="group bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#F2A900] transition-all text-center overflow-hidden"
+                                    >
+                                        {/* Cover photo */}
+                                        <img
+                                            src={firstSemImage}
+                                            alt="First Semester"
+                                            className="w-full h-40 object-cover rounded-t-2xl"
+                                        />
+                                        <div className="p-8">
+                                            <h3 className="text-xl font-bold text-gray-800">Semester {sem}</h3>
+                                            <p className="text-sm text-gray-500 mt-2">
+                                                {mode === 'preview' ? 'Preview' : 'Manage'} semester {sem}
+                                            </p>
+                                        </div>
+                                    </button>
+                                );
+                            }
+                            return (
+                                <button
+                                    key={sem}
+                                    onClick={() => handleSemesterSelect(sem)}
+                                    className="group bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#F2A900] transition-all text-center overflow-hidden"
+                                >
+                                    {/* Cover photo */}
+                                    <img
+                                        src={secondSemImage}
+                                        alt="Second Semester"
+                                        className="w-full h-40 object-cover rounded-t-2xl"
+                                    />
+                                    <div className="p-8">
+                                        <h3 className="text-xl font-bold text-gray-800">Semester {sem}</h3>
+                                        <p className="text-sm text-gray-500 mt-2">
+                                            {mode === 'preview' ? 'Preview' : 'Manage'} semester {sem}
+                                        </p>
+                                    </div>
+                                </button>
+                            );
+                        })}
                     </motion.div>
                 )}
 

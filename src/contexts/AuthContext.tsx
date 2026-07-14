@@ -6,6 +6,7 @@ interface AuthContextType {
   user: any | null;
   userProfile: StudentUser | null;
   isLoading: boolean;
+  isCheckingAuth: boolean;
   isAuthenticated: boolean;
   isAdmin: boolean;
   signIn: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
@@ -32,6 +33,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<any | null>(null);
   const [userProfile, setUserProfile] = useState<StudentUser | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
 
   // Check authentication status on mount
@@ -63,6 +65,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       console.error('Auth check failed:', error);
     } finally {
       setIsLoading(false);
+      setIsCheckingAuth(false);
     }
   };
 
@@ -147,6 +150,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     user,
     userProfile,
     isLoading,
+    isCheckingAuth,
     isAuthenticated: !!user,
     isAdmin,
     signIn,

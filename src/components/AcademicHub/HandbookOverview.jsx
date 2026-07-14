@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { MdArrowForward } from 'react-icons/md';
 
-const HandbookOverview = ({ onContinue }) => {
+const HandbookOverview = ({ onContinue, onBrowseOtherLevels }) => {
     const cardVariants = {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 }
@@ -58,6 +58,12 @@ const HandbookOverview = ({ onContinue }) => {
                             Get Started
                             <MdArrowForward className="w-5 h-5" />
                         </motion.button>
+                        <button
+                            onClick={onBrowseOtherLevels}
+                            className="w-full mt-3 border border-white/50 text-white/90 font-medium py-2.5 lg:py-3 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-white/10 transition-all"
+                        >
+                            Browse Other Levels
+                        </button>
                         <p className="text-white/60 text-xs lg:text-sm mt-4">
                             Browse courses by level and specialization
                         </p>

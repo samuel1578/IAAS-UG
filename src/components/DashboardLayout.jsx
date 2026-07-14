@@ -18,9 +18,22 @@ import {
   MdAnalytics,
   MdLibraryBooks
 } from 'react-icons/md';
-import { FaCloudSunRain, FaTemperatureHigh, FaTint } from 'react-icons/fa';
+import { FaTemperatureHigh, FaTint } from 'react-icons/fa';
+import {
+  WiDaySunny,
+  WiDayCloudy,
+  WiCloudy,
+  WiFog,
+  WiRainMix,
+  WiRain,
+  WiSnow,
+  WiThunderstorm,
+  WiNa
+} from 'react-icons/wi';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { useWeather } from '../hooks/useWeather';
+import SkeletonText from './skeletons/SkeletonText';
 import ugLogo from '../assets/uglogo.png';
 import agricLogo from '../assets/lln.jpeg';
 import BottomTabMoreMenu from './BottomTabMoreMenu';
@@ -30,7 +43,41 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
   const { user, isAdmin } = useAuth();
+  const { temperature, humidity, description, isLoading, error, lastUpdated } = useWeather();
   const navigate = useNavigate();
+
+  // Map the live weather description (derived from Open-Meteo's WMO code
+  // groupings in useWeather.ts) to a specific Weather Icons (react-icons/wi)
+  // glyph. Temperature/humidity keep their fixed Fa icons.
+  const WEATHER_ICONS = {
+    Clear: WiDaySunny,
+    'Mainly Clear': WiDaySunny,
+    'Partly Cloudy': WiDayCloudy,
+    Overcast: WiCloudy,
+    Fog: WiFog,
+    Drizzle: WiRainMix,
+    'Freezing Drizzle': WiRainMix,
+    Rain: WiRain,
+    'Freezing Rain': WiRain,
+    'Rain Showers': WiRain,
+    Snow: WiSnow,
+    'Snow Grains': WiSnow,
+    'Snow Showers': WiSnow,
+    Thunderstorm: WiThunderstorm,
+    Unknown: WiNa
+  };
+  const WeatherConditionIcon = WEATHER_ICONS[description] ?? WiNa;
+
+  // Relative "Updated Xm ago" label for the live-data indicator.
+  const updatedLabel = (() => {
+    if (!lastUpdated) return '';
+    const mins = Math.floor((Date.now() - lastUpdated) / 60000);
+    if (mins < 1) return 'Updated just now';
+    if (mins < 60) return `Updated ${mins}m ago`;
+    const hrs = Math.floor(mins / 60);
+    if (hrs < 24) return `Updated ${hrs}h ago`;
+    return `Updated ${Math.floor(hrs / 24)}d ago`;
+  })();
 
   const baseMenuItems = [
     { id: 'academic', label: 'Academic Hub', mobileLabel: 'Academic', icon: MdBook },
@@ -90,20 +137,50 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
           </div>
 
           {/* CENTER PILL: Weather */}
-          <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-3 border border-[#E5E7EB] flex-1">
-            <div className="flex items-center gap-2">
-              <FaCloudSunRain className="w-5 h-5 text-[#F2A900]" />
-              <span className="text-sm font-medium text-gray-700">Partly Cloudy</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaTemperatureHigh className="w-5 h-5 text-[#004721]" />
-              <span className="text-sm font-medium text-gray-700">29°C</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <FaTint className="w-5 h-5 text-blue-500" />
-              <span className="text-sm font-medium text-gray-700">75%</span>
-            </div>
-          </div>
+          {error ? null : (
+            <div className="flex items-center gap-4 bg-white rounded-2xl px-6 py-3 border border-[#E5E7EB] flex-1">
+                <div className="flex items-center gap-2">
+                  <WeatherConditionIcon className="w-5 h-5 text-[#F2A900]" />
+                  {isLoading ? (
+                    <div className="w-24">
+                      <SkeletonText lines={1} lineHeight="1rem" />
+                    </div>
+                  ) : (
+                    <span className="text-sm font-medium text-gray-700">{description}</span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaTemperatureHigh className="w-5 h-5 text-[#004721]" />
+                  {isLoading ? (
+                    <div className="w-10">
+                      <SkeletonText lines={1} lineHeight="1rem" />
+                    </div>
+                  ) : (
+                    <span className="text-sm font-medium text-gray-700">
+                      {temperature !== null ? `${Math.round(temperature)}°C` : ''}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaTint className="w-5 h-5 text-blue-500" />
+                  {isLoading ? (
+                    <div className="w-8">
+                      <SkeletonText lines={1} lineHeight="1rem" />
+                    </div>
+                  ) : (
+                    <span className="text-sm font-medium text-gray-700">
+                      {humidity !== null ? `${Math.round(humidity)}%` : ''}
+                    </span>
+                  )}
+                </div>
+                {!isLoading && !error && updatedLabel && (
+                  <span className="inline-flex items-center gap-1 text-[10px] font-medium text-green-700 bg-green-50 px-2 py-0.5 rounded-full border-l border-[#E5E7EB] pl-4">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                    {updatedLabel}
+                  </span>
+                )}
+              </div>
+          )}
 
           {/* RIGHT PILL: User Profile + Level Badge */}
           {user && (

@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { MdArrowBack, MdVisibility, MdVisibilityOff } from 'react-icons/md';
+import Skeleton from '../components/skeletons/Skeleton';
+import SkeletonText from '../components/skeletons/SkeletonText';
 import ugLogo from '../assets/uglogo.png';
 import agricLogo from '../assets/lln.jpeg';
 import desktopHero from '../assets/newhor.jpg';
@@ -26,7 +28,7 @@ const AuthPage = () => {
     department: ''
   });
 
-  const { signIn, signUp, user, userProfile } = useAuth();
+  const { signIn, signUp, user, userProfile, isCheckingAuth } = useAuth();
   const navigate = useNavigate();
 
   // Redirect to dashboard if already authenticated
@@ -223,6 +225,34 @@ const AuthPage = () => {
           className="flex items-center justify-center w-full"
         >
           <div className="bg-white rounded-2xl shadow-xl p-6 w-full max-w-sm lg:max-w-md">
+            {isCheckingAuth ? (
+              <div aria-hidden="true">
+                {/* Heading */}
+                <Skeleton width="40%" height="1.5rem" rounded="md" className="mb-6" />
+
+                <div className="space-y-4">
+                  {/* Email field */}
+                  <div>
+                    <Skeleton width="6rem" height="0.875rem" rounded="sm" className="mb-2" />
+                    <Skeleton width="100%" height="3rem" rounded="lg" />
+                  </div>
+
+                  {/* Password field */}
+                  <div>
+                    <Skeleton width="6rem" height="0.875rem" rounded="sm" className="mb-2" />
+                    <Skeleton width="100%" height="3rem" rounded="lg" />
+                  </div>
+
+                  {/* Submit button */}
+                  <Skeleton width="100%" height="3rem" rounded="lg" />
+                </div>
+
+                {/* Sign-up prompt */}
+                <div className="mt-6 flex justify-center">
+                  <SkeletonText lines={1} lineHeight="0.875rem" />
+                </div>
+              </div>
+            ) : (
             <AnimatePresence mode="wait">
               {isLogin ? (
                 <motion.div
@@ -520,6 +550,7 @@ const AuthPage = () => {
                 </motion.div>
               )}
             </AnimatePresence>
+            )}
           </div>
         </motion.div>
 

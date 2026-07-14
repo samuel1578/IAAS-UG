@@ -427,7 +427,7 @@ export const useAcademicHubData = (userLevel: number) => {
     const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
     const [showCourseDetails, setShowCourseDetails] = useState(false);
 
-    const [availableCourses, setAvailableCourses] = useState<Course[]>([]);
+    const [allCourses, setAllCourses] = useState<Course[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -439,7 +439,7 @@ export const useAcademicHubData = (userLevel: number) => {
         databases
             .listDocuments(APPWRITE_CONFIG.databaseId, APPWRITE_CONFIG.coursesCollectionId, [
                 Query.equal('level', userLevel),
-                Query.equal('semester', semester),
+                Query.limit(100),
             ])
             .then((response) => {
                 if (cancelled) return;
@@ -455,7 +455,7 @@ export const useAcademicHubData = (userLevel: number) => {
                     prerequisites: doc.prerequisites ?? [],
                     specialization: doc.specialization ?? [],
                 }));
-                setAvailableCourses(mapped);
+                setAllCourses(mapped);
                 setIsLoading(false);
             })
             .catch((err: unknown) => {
@@ -467,19 +467,33 @@ export const useAcademicHubData = (userLevel: number) => {
         return () => {
             cancelled = true;
         };
-    }, [userLevel, semester]);
+    }, [userLevel]);
+
+    const semesterCourses = useMemo(
+        () => allCourses.filter((c) => c.semester === semester),
+        [allCourses, semester]
+    );
 
     const filteredCourses = useMemo(() => {
-        if (userLevel < 300) return availableCourses;
-        if (!specialization) return availableCourses;
-        return availableCourses.filter(
+        if (userLevel < 300) return semesterCourses;
+        if (!specialization) return semesterCourses;
+        return semesterCourses.filter(
             (c) => c.specialization.length === 0 || c.specialization.includes(specialization)
         );
-    }, [availableCourses, specialization, userLevel]);
+    }, [semesterCourses, specialization, userLevel]);
+
+    const sem1Count = useMemo(
+        () => allCourses.filter((c) => c.semester === 1).length,
+        [allCourses]
+    );
+    const sem2Count = useMemo(
+        () => allCourses.filter((c) => c.semester === 2).length,
+        [allCourses]
+    );
 
     const selectedCourse = useMemo(() => {
-        return availableCourses.find((c) => c.id === selectedCourseId) || null;
-    }, [availableCourses, selectedCourseId]);
+        return allCourses.find((c) => c.id === selectedCourseId) || null;
+    }, [allCourses, selectedCourseId]);
 
     return {
         semester,
@@ -493,6 +507,8 @@ export const useAcademicHubData = (userLevel: number) => {
         showCourseDetails,
         setShowCourseDetails,
         availableCourses: filteredCourses,
+        sem1Count,
+        sem2Count,
         selectedCourse,
         needsSpecializationSelection: userLevel >= 300 && !specialization,
         canToggleSemester: true,

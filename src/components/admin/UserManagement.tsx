@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import { MdPerson, MdEmail, MdSchool, MdCheck, MdClose, MdPending } from 'react-icons/md';
 import Card from '../Card';
 import Button from '../Button';
+import Skeleton from '../skeletons/Skeleton';
+import SkeletonText from '../skeletons/SkeletonText';
+import SkeletonAvatar from '../skeletons/SkeletonAvatar';
 import { AdminService, StudentUser } from '../../lib/appwrite';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -87,17 +90,6 @@ const UserManagement = () => {
     }
   };
 
-  if (loading) {
-    return (
-      <div className="max-w-6xl">
-        <div className="text-center py-12">
-          <div className="w-8 h-8 border-4 border-[#00592D] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading user data...</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="max-w-6xl space-y-8">
       {/* Header */}
@@ -107,7 +99,7 @@ const UserManagement = () => {
       </div>
 
       {/* Analytics Cards */}
-      {analytics && (
+      {analytics ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card hover={false} className="p-4">
             <div className="text-center">
@@ -136,13 +128,58 @@ const UserManagement = () => {
             </div>
           </Card>
         </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Card key={index} hover={false} className="p-4">
+              <div className="flex flex-col items-center gap-2">
+                <Skeleton width="3rem" height="2rem" rounded />
+                <Skeleton width="80%" height="0.875rem" />
+              </div>
+            </Card>
+          ))}
+        </div>
       )}
 
       {/* Users List */}
       <div className="space-y-4">
         <h3 className="text-xl font-semibold text-gray-800 mb-4">Student Registrations</h3>
 
-        {users.length === 0 ? (
+        {loading ? (
+          Array.from({ length: 4 }).map((_, index) => (
+            <Card key={index} hover={false}>
+              <div className="p-6">
+                <div className="flex-1 space-y-3">
+                  {/* Avatar + name/email */}
+                  <div className="flex items-start gap-4">
+                    <SkeletonAvatar size={48} />
+                    <div className="flex-1 space-y-2">
+                      <div className="w-2/5">
+                        <SkeletonText lines={1} lineHeight="1.125rem" />
+                      </div>
+                      <div className="w-3/5">
+                        <SkeletonText lines={1} lineHeight="0.875rem" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Student details grid */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                    {Array.from({ length: 4 }).map((__, cell) => (
+                      <div key={cell} className="space-y-1">
+                        <Skeleton width="60%" height="0.875rem" />
+                        <Skeleton width="80%" height="0.875rem" />
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Registration date */}
+                  <Skeleton width="10rem" height="0.75rem" />
+                </div>
+              </div>
+            </Card>
+          ))
+        ) : users.length === 0 ? (
           <Card hover={false}>
             <div className="p-8 text-center text-gray-500">
               No student registrations found.
