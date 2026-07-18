@@ -19,8 +19,9 @@ The following environment variables are used in `src/lib/appwrite.ts`:
 | `VITE_APPWRITE_USERS_COLLECTION_ID` | Student Profiles Collection | `src/lib/appwrite.ts` |
 | `VITE_APPWRITE_HIGHLIGHTS_COLLECTION_ID` | Student Highlights Collection | `src/lib/appwrite.ts` |
 | `VITE_APPWRITE_MATERIALS_COLLECTION_ID` | Course Materials Metadata | `src/lib/appwrite.ts` |
-| `VITE_APPWRITE_COURSES_COLLECTION_ID` | Courses Placeholder | `src/lib/appwrite.ts` |
+| `VITE_APPWRITE_COURSES_COLLECTION_ID` | Courses Catalogue Collection | `src/lib/appwrite.ts` |
 | `VITE_APPWRITE_SPECIALIZATIONS_COLLECTION_ID` | Specializations Placeholder | `src/lib/appwrite.ts` |
+| `VITE_APPWRITE_NOTICES_COLLECTION_ID` | Notices Collection | `src/lib/appwrite.ts` |
 | `VITE_APPWRITE_BUCKET_ID` | File Storage for Materials | `src/lib/appwrite.ts` |
 | `VITE_APPWRITE_ADMIN_TEAM_ID` | Admin Team ID | `src/lib/appwrite.ts` |
 
@@ -41,6 +42,7 @@ The following environment variables are used in `src/lib/appwrite.ts`:
     - `isAdmin`: Boolean, Default: `false`
     - `profileStatus`: Enum (`pending`, `approved`, `rejected`), Default: `pending`
     - `createdAt`: Datetime, Required
+    - `specialization`: String (Optional), Max Size: 100, Default: `null` — the specialization selected by this individual student (Level 300/400). Distinct from `courses.specialization[]` (which courses a specialization belongs to).
 - **Indexes**:
     - `email_unique`: Key: `email`, Type: `unique`
     - `status_idx`: Key: `profileStatus`, Type: `key`
@@ -49,8 +51,10 @@ The following environment variables are used in `src/lib/appwrite.ts`:
 - **Permissions**:
     - `role:all`: Read
     - `role:member`: Create
-    - `user:[ID]`: Update (Self)
+    - `user:[ID]`: Update (Self) — granted per-document at profile creation time (see note below)
     - `team:[ADMIN_TEAM]`: Update, Delete
+
+    > **Self-service update note**: The `users` collection-level `update` permission is restricted to `team:admins`. To let a student update only their own profile (e.g. `specialization`), the profile document is created with document-level permissions `update("user:<ACCOUNT_ID>")` and `read("user:<ACCOUNT_ID>")`. This grants the owner the ability to update their own document without weakening the collection or exposing other users' profiles. This is implemented in `AuthService.signUp` and `AuthService.createUserProfileFromAccount`.
 
 #### Collection: `highlights` (ID: `VITE_APPWRITE_HIGHLIGHTS_COLLECTION_ID`)
 - **Description**: Student experience highlights.
@@ -90,6 +94,35 @@ The following environment variables are used in `src/lib/appwrite.ts`:
 - **Permissions**:
     - `role:all`: Read
     - `team:[ADMIN_TEAM]`: Create, Update, Delete
+
+#### Collection: `notices` (ID: `VITE_APPWRITE_NOTICES_COLLECTION_ID`)
+- **Description**: Administrative notices/announcements managed by admins. Student-facing consumption (SRC Noticeboard, Dashboard Home) is deferred.
+- **Attributes**:
+    - `title`: String, Required, Size: 255
+    - `summary`: String, Required, Size: 500
+    - `content`: String, Required, Size: 5000
+    - `category`: Enum (`academic`, `src`, `event`, `general`, `opportunity`), Required
+    - `status`: Enum (`draft`, `published`, `archived`), Required
+    - `priority`: Enum (`normal`, `important`, `urgent`), Required
+    - `audience`: Enum (`all`, `level_100`, `level_200`, `level_300`, `level_400`), Required
+    - `authorName`: String, Required, Size: 255 (System-populated from the admin's profile/account name)
+    - `publishedAt`: Datetime, Optional (Set when status becomes `published`)
+    - `expiresAt`: Datetime, Optional
+    - `createdAt`: Datetime, Required (System-populated)
+    - `updatedAt`: Datetime, Required (System-populated)
+- **Indexes**:
+    - `status_idx`: Key: `status`, Type: `key`
+    - `published_idx`: Key: `publishedAt`, Type: `key`
+    - `audience_idx`: Key: `audience`, Type: `key`
+    - `priority_idx`: Key: `priority`, Type: `key`
+- **Permissions**:
+    - `role:member`: Read (Authenticated users)
+    - `team:[ADMIN_TEAM]`: Create, Update, Delete
+- **Status / publishedAt rules** (enforced in `NoticeService`):
+    - Create as `draft`: `publishedAt = null`. Create as `published`: `publishedAt = now`.
+    - `draft → published`: `publishedAt = now`.
+    - `published → draft`: `publishedAt = null`.
+    - `→ archived`: `publishedAt` preserved when previously published; otherwise `null`.
 
 ## 4. Storage Buckets
 

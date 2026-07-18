@@ -1,6 +1,6 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
 import { Query } from 'appwrite';
-import { databases, APPWRITE_CONFIG } from '../lib/appwrite';
+import { databases, APPWRITE_CONFIG, AuthService } from '../lib/appwrite';
 
 export interface Course {
     id: string;
@@ -420,9 +420,14 @@ export const mockCoursesData = {
 
 export const SPECIALIZATIONS = ['Agricultural Economics', 'Agribusiness', 'Animal Science', 'Crop Science', 'Horticulture', 'Postharvest Technology', 'Soil Science', 'Agricultural Extension'];
 
-export const useAcademicHubData = (userLevel: number) => {
+export const useAcademicHubData = (userLevel: number, savedSpecialization?: string | null) => {
     const [semester, setSemester] = useState<1 | 2>(1);
-    const [specialization, setSpecialization] = useState<string | null>(null);
+    // Seed from the persisted profile value (Level 300/400) so the student is
+    // not forced to re-select on every visit. Existing Level 100/200 users and
+    // users with no saved value start as null.
+    const [specialization, setSpecialization] = useState<string | null>(
+        userLevel >= 300 ? (savedSpecialization ?? null) : null
+    );
     const [expandedCourse, setExpandedCourse] = useState<string | null>(null);
     const [selectedCourseId, setSelectedCourseId] = useState<string | null>(null);
     const [showCourseDetails, setShowCourseDetails] = useState(false);
@@ -495,11 +500,26 @@ export const useAcademicHubData = (userLevel: number) => {
         return allCourses.find((c) => c.id === selectedCourseId) || null;
     }, [allCourses, selectedCourseId]);
 
+    // Persist the selected specialization to the student's profile via the
+    // project's Appwrite service architecture. Returns the service result so
+    // the caller can decide how to surface success/failure. Does not throw.
+    const persistSpecialization = useCallback(
+        async (value: string | null) => {
+            const result = await AuthService.updateUserSpecialization(value);
+            if (result.success) {
+                setSpecialization(value);
+            }
+            return result;
+        },
+        []
+    );
+
     return {
         semester,
         setSemester,
         specialization,
         setSpecialization,
+        persistSpecialization,
         expandedCourse,
         setExpandedCourse,
         selectedCourseId,

@@ -102,6 +102,13 @@
                     "type": "datetime",
                     "required": true,
                     "default": null
+                },
+                {
+                    "key": "specialization",
+                    "type": "string",
+                    "size": 100,
+                    "required": false,
+                    "default": null
                 }
             ],
             "indexes": [
@@ -331,6 +338,159 @@
                     ],
                     "orders": [
                         "DESC"
+                    ]
+                }
+        	]
+        },
+        {
+            "$id": "notices",
+            "name": "notices",
+            "databaseId": "iaas_ug",
+            "enabled": true,
+            "rowSecurity": false,
+            "$permissions": [
+                "read(\"users\")",
+                "create(\"team:admins\")",
+                "update(\"team:admins\")",
+                "delete(\"team:admins\")"
+            ],
+            "columns": [
+                {
+                    "key": "title",
+                    "type": "varchar",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "summary",
+                    "type": "varchar",
+                    "size": 500,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "content",
+                    "type": "varchar",
+                    "size": 5000,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "category",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "academic",
+                        "src",
+                        "event",
+                        "general",
+                        "opportunity"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "status",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "draft",
+                        "published",
+                        "archived"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "priority",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "normal",
+                        "important",
+                        "urgent"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "audience",
+                    "type": "string",
+                    "format": "enum",
+                    "elements": [
+                        "all",
+                        "level_100",
+                        "level_200",
+                        "level_300",
+                        "level_400"
+                    ],
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "authorName",
+                    "type": "varchar",
+                    "size": 255,
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "publishedAt",
+                    "type": "datetime",
+                    "required": false,
+                    "default": null
+                },
+                {
+                    "key": "expiresAt",
+                    "type": "datetime",
+                    "required": false,
+                    "default": null
+                },
+                {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true,
+                    "default": null
+                },
+                {
+                    "key": "updatedAt",
+                    "type": "datetime",
+                    "required": true,
+                    "default": null
+                }
+            ],
+            "indexes": [
+                {
+                    "key": "status_idx",
+                    "type": "key",
+                    "columns": [
+                        "status"
+                    ]
+                },
+                {
+                    "key": "published_idx",
+                    "type": "key",
+                    "columns": [
+                        "publishedAt"
+                    ]
+                },
+                {
+                    "key": "audience_idx",
+                    "type": "key",
+                    "columns": [
+                        "audience"
+                    ]
+                },
+                {
+                    "key": "priority_idx",
+                    "type": "key",
+                    "columns": [
+                        "priority"
                     ]
                 }
             ]

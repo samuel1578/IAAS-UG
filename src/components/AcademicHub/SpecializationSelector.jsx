@@ -3,7 +3,7 @@ import Button from '../Button';
 import { SPECIALIZATIONS } from '../../hooks/useAcademicHubData';
 import { MdArrowForward } from 'react-icons/md';
 
-const SpecializationSelector = ({ selectedSpecialization, onSelect, onContinue }) => {
+const SpecializationSelector = ({ selectedSpecialization, onSelect, onContinue, isSaving = false }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -50,15 +50,15 @@ const SpecializationSelector = ({ selectedSpecialization, onSelect, onContinue }
                     transition={{ delay: 0.2 }}
                     className="flex justify-center"
                 >
-                    <Button
-                        variant="primary"
-                        onClick={onContinue}
-                        disabled={!selectedSpecialization}
-                        className="flex items-center gap-2 px-8 py-4 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                        Continue
-                        <MdArrowForward className="w-5 h-5" />
-                    </Button>
+                        <Button
+                            variant="primary"
+                            onClick={onContinue}
+                            disabled={!selectedSpecialization || isSaving}
+                            className="flex items-center gap-2 px-8 py-4 text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isSaving ? 'Saving…' : 'Continue'}
+                            {!isSaving && <MdArrowForward className="w-5 h-5" />}
+                        </Button>
                 </motion.div>
             </div>
         </motion.div>

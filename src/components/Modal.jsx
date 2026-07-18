@@ -1,7 +1,23 @@
+import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MdClose } from 'react-icons/md';
 
 const Modal = ({ isOpen, onClose, title, children, size = 'medium' }) => {
+  // Close on Escape and lock background scroll while open (modal QA).
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [isOpen, onClose]);
+
   const sizes = {
     small: 'max-w-[calc(100vw-2rem)] sm:max-w-md',
     medium: 'max-w-[calc(100vw-2rem)] sm:max-w-2xl',
@@ -30,8 +46,10 @@ const Modal = ({ isOpen, onClose, title, children, size = 'medium' }) => {
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <h3 className="text-xl font-bold text-[#00592D]">{title}</h3>
                 <button
+                  type="button"
                   onClick={onClose}
-                  className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                  aria-label="Close dialog"
+                  className="p-1 hover:bg-gray-100 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00592D]"
                 >
                   <MdClose className="w-6 h-6 text-gray-600" />
                 </button>

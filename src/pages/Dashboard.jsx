@@ -7,11 +7,13 @@ import LabLogbook from '../components/modules/LabLogbook';
 import CampusMap from '../components/modules/CampusMap';
 import Faculty from '../components/modules/Faculty';
 import SRCNoticeboard from '../components/modules/SRCNoticeboard';
+import DashboardHome from '../components/modules/DashboardHome';
 import CourseMaterialsNavigator from '../components/admin/CourseMaterialsNavigator';
 import CourseCatalogManager from '../components/admin/CourseCatalogManager';
 import UserManagement from '../components/admin/UserManagement';
 import AnalyticsPanel from '../components/admin/AnalyticsPanel';
 import SettingsPanel from '../components/admin/SettingsPanel';
+import NoticeManagement from '../components/admin/NoticeManagement';
 import { useAuth } from '../contexts/AuthContext';
 import Skeleton from '../components/skeletons/Skeleton';
 import SkeletonText from '../components/skeletons/SkeletonText';
@@ -94,16 +96,22 @@ const DashboardShellSkeleton = () => {
 
 const Dashboard = ({ highlights, onApproveHighlight, onRejectHighlight, removeHighlight }) => {
   const { level } = useParams();
-  const { user, isAdmin, userProfile } = useAuth();
-  const [activeModule, setActiveModule] = useState('academic');
+  const { user, isAdmin, userProfile, isLoading } = useAuth();
+
+  // Default module: students land on the personalized Home module; admins land
+  // on the Academic Hub (Course Materials Navigator). Set ONCE via the
+  // initializer so it only applies to the initial render and never hijacks a
+  // manual navigation click (e.g. clicking "Academic Hub" in the sidebar).
+  const [activeModule, setActiveModule] = useState(() => (isAdmin ? 'academic' : 'home'));
 
   // Profile/dashboard data isn't ready until userProfile has resolved
-  // (e.g. the brief window where the user is authenticated but the profile
-  // document is still being fetched). Show the shell skeleton until then.
-  const isDataReady = userProfile !== null;
+  // AND the full auth check has completed. Waiting on !isLoading guarantees
+  // isAdmin is in its final state, preventing a Home -> admin-module flicker.
+  const isDataReady = userProfile !== null && !isLoading;
 
   const renderModule = () => {
     const modules = {
+      home: <DashboardHome onNavigate={setActiveModule} />,
       academic: isAdmin ? <CourseMaterialsNavigator /> : <AcademicHub level={level} />,
       logbook: <LabLogbook />,
       map: <CampusMap />,
@@ -112,7 +120,8 @@ const Dashboard = ({ highlights, onApproveHighlight, onRejectHighlight, removeHi
       users: <UserManagement />,
       analytics: <AnalyticsPanel />,
       settings: <SettingsPanel />,
-      catalog: <CourseCatalogManager />
+      catalog: <CourseCatalogManager />,
+      notices: <NoticeManagement />
     };
 
     const moduleVariants = {

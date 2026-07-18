@@ -16,7 +16,8 @@ import {
   MdPerson,
   MdSettings,
   MdAnalytics,
-  MdLibraryBooks
+  MdLibraryBooks,
+  MdCampaign
 } from 'react-icons/md';
 import { FaTemperatureHigh, FaTint } from 'react-icons/fa';
 import {
@@ -80,16 +81,18 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
   })();
 
   const baseMenuItems = [
+    { id: 'home', label: 'Home', mobileLabel: 'Home', icon: MdDashboard },
     { id: 'academic', label: 'Academic Hub', mobileLabel: 'Academic', icon: MdBook },
+    { id: 'noticeboard', label: 'SRC Noticeboard', mobileLabel: 'Notice', icon: MdNotifications },
     { id: 'logbook', label: 'Lab Logbook', mobileLabel: 'Logbook', icon: MdScience },
     { id: 'map', label: 'Campus Map', mobileLabel: 'Map', icon: MdMap },
     { id: 'faculty', label: 'Faculty', mobileLabel: 'Faculty', icon: MdPeople },
-    { id: 'noticeboard', label: 'SRC Noticeboard', mobileLabel: 'Notice', icon: MdNotifications },
   ];
 
   const adminMenuItems = [
     { id: 'academic', label: 'Academic Hub', mobileLabel: 'Academic', icon: MdBook },
     { id: 'users', label: 'User Management', mobileLabel: 'Users', icon: MdPeople },
+    { id: 'notices', label: 'Notice Management', mobileLabel: 'Notices', icon: MdCampaign },
     { id: 'analytics', label: 'Analytics', mobileLabel: 'Analytics', icon: MdAnalytics },
     { id: 'settings', label: 'Settings', mobileLabel: 'Settings', icon: MdSettings },
     { id: 'catalog', label: 'Course Catalog', mobileLabel: 'Catalog', icon: MdLibraryBooks },
@@ -99,11 +102,11 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
 
   const mobilePrimaryTabs = isAdmin
     ? menuItems.slice(0, 3)
-    : menuItems.filter((item) => ['academic', 'map', 'faculty'].includes(item.id));
+    : menuItems.filter((item) => ['home', 'academic', 'noticeboard', 'logbook'].includes(item.id));
 
   const mobileOverflowTabs = isAdmin
     ? menuItems.slice(3)
-    : menuItems.filter((item) => !['academic', 'map', 'faculty'].includes(item.id));
+    : menuItems.filter((item) => !['home', 'academic', 'noticeboard', 'logbook'].includes(item.id));
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] lg:bg-transparent">

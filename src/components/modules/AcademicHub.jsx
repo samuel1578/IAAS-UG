@@ -7,17 +7,22 @@ import SemesterToggle from '../AcademicHub/SemesterToggle';
 import CourseListView from '../AcademicHub/CourseListView';
 import CourseDetailsModal from '../AcademicHub/CourseDetailsModal';
 import { useAcademicHubData } from '../../hooks/useAcademicHubData';
+import { useAuth } from '../../contexts/AuthContext';
 
 const AcademicHub = ({ level }) => {
   const studentLevel = parseInt(level);
+  const { userProfile, refreshProfile } = useAuth();
   const [currentStep, setCurrentStep] = useState('handbook'); // handbook → level-select → specialization → courses
   const [browseLevel, setBrowseLevel] = useState(studentLevel); // defaults to the student's real level, changeable independently
+  const [saveError, setSaveError] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
 
   const {
     semester,
     setSemester,
     specialization,
     setSpecialization,
+    persistSpecialization,
     expandedCourse,
     setExpandedCourse,
     selectedCourseId,
@@ -32,7 +37,7 @@ const AcademicHub = ({ level }) => {
     error,
     sem1Count,
     sem2Count
-  } = useAcademicHubData(browseLevel);
+  } = useAcademicHubData(browseLevel, userProfile?.specialization ?? null);
 
   // Step flow logic
   const handleHandbookContinue = () => {
@@ -63,7 +68,26 @@ const AcademicHub = ({ level }) => {
     setCurrentStep('handbook');
   };
 
-  const handleSpecializationContinue = () => {
+  const handleSpecializationContinue = async () => {
+    // Persist the selected specialization (only for Level 300/400 students who
+    // actually chose one). Failures are surfaced inline without crashing or
+    // silently claiming success.
+    if (browseLevel >= 300 && specialization) {
+      setIsSaving(true);
+      setSaveError(null);
+      const result = await persistSpecialization(specialization);
+      setIsSaving(false);
+      if (!result.success) {
+        setSaveError(result.error || 'Could not save your specialization. Please try again.');
+        return;
+      }
+      // Keep AuthContext profile state in sync without forcing a re-login.
+      try {
+        await refreshProfile();
+      } catch {
+        // Non-fatal: the Academic Hub session already reflects the new value.
+      }
+    }
     setCurrentStep('courses');
   };
 
@@ -117,10 +141,21 @@ const AcademicHub = ({ level }) => {
         return (
           <div className="space-y-6">
             {renderBrowseBanner()}
+            {saveError && (
+              <motion.div
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center gap-2 text-sm bg-red-50 border border-red-200 text-red-700 p-3 rounded-lg"
+                role="alert"
+              >
+                <span>{saveError}</span>
+              </motion.div>
+            )}
             <SpecializationSelector
               selectedSpecialization={specialization}
               onSelect={setSpecialization}
               onContinue={handleSpecializationContinue}
+              isSaving={isSaving}
             />
           </div>
         );

@@ -10,6 +10,7 @@ const APPWRITE_CONFIG = {
   coursesCollectionId: import.meta.env.VITE_APPWRITE_COURSES_COLLECTION_ID,
   materialsCollectionId: import.meta.env.VITE_APPWRITE_MATERIALS_COLLECTION_ID,
   specializationsCollectionId: import.meta.env.VITE_APPWRITE_SPECIALIZATIONS_COLLECTION_ID,
+  noticesCollectionId: import.meta.env.VITE_APPWRITE_NOTICES_COLLECTION_ID,
   bucketId: import.meta.env.VITE_APPWRITE_BUCKET_ID,
   adminTeamId: import.meta.env.VITE_APPWRITE_ADMIN_TEAM_ID,
 };
@@ -37,6 +38,7 @@ export interface StudentUser {
   isAdmin: boolean; // Admin flag
   createdAt: string;
   profileStatus: 'pending' | 'approved' | 'rejected';
+  specialization?: string | null; // selected by this individual student (Level 300/400)
 }
 
 export interface StudentHighlight {
@@ -62,6 +64,51 @@ export interface CourseMaterial {
   fileUrl: string;
   uploadedBy: string;
   uploadedDate: string;
+}
+
+// Notice types (notices collection)
+export type NoticeCategory = 'academic' | 'src' | 'event' | 'general' | 'opportunity';
+export type NoticeStatus = 'draft' | 'published' | 'archived';
+export type NoticePriority = 'normal' | 'important' | 'urgent';
+export type NoticeAudience = 'all' | 'level_100' | 'level_200' | 'level_300' | 'level_400';
+
+export interface Notice {
+  $id: string;
+  title: string;
+  summary: string;
+  content: string;
+  category: NoticeCategory;
+  status: NoticeStatus;
+  priority: NoticePriority;
+  audience: NoticeAudience;
+  authorName: string;
+  publishedAt: string | null;
+  expiresAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Notice fields the admin form is allowed to supply on create.
+export interface CreateNoticeInput {
+  title: string;
+  summary: string;
+  content: string;
+  category: NoticeCategory;
+  priority: NoticePriority;
+  audience: NoticeAudience;
+  status: 'draft' | 'published';
+  expiresAt?: string | null;
+}
+
+// Narrowly typed update payload (system-managed fields excluded).
+export interface UpdateNoticeInput {
+  title: string;
+  summary: string;
+  content: string;
+  category: NoticeCategory;
+  priority: NoticePriority;
+  audience: NoticeAudience;
+  expiresAt?: string | null;
 }
 
 // Authentication functions
@@ -107,7 +154,12 @@ export class AuthService {
             isAdmin: false,
             profileStatus: 'pending',
             createdAt: new Date().toISOString(),
-          }
+          },
+          // Grant the owner (the account that owns this profile) document-level
+          // update permission so they can safely update only their own profile
+          // fields (e.g. specialization) via the client SDK. Collection-level
+          // update remains restricted to team:admins for protected fields.
+          [`update("user:${user.$id}")`, `read("user:${user.$id}")`]
         );
       } catch (profileError: any) {
         console.error('Profile creation failed during signup. Attempting cleanup...', profileError);
@@ -252,8 +304,59 @@ export class AuthService {
         isAdmin: false,
         profileStatus: 'pending',
         createdAt: now,
-      }
+      },
+      // Grant the owner document-level update permission so they can safely
+      // update only their own profile fields (e.g. specialization) later.
+      [`update("user:${user.$id}")`, `read("user:${user.$id}")`]
     );
+  }
+
+  // Canonical specialization options, mirrored from the UI source
+  // (SPECIALIZATIONS in src/hooks/useAcademicHubData.ts). Keep the two lists in
+  // sync. Used only to validate a requested value before persisting it.
+  static readonly ALLOWED_SPECIALIZATIONS = [
+    'Agricultural Economics',
+    'Agribusiness',
+    'Animal Science',
+    'Crop Science',
+    'Horticulture',
+    'Postharvest Technology',
+    'Soil Science',
+    'Agricultural Extension',
+  ];
+
+  // Persist the authenticated student's selected specialization on their own
+  // profile document. Only updates the `specialization` field.
+  //
+  // Security:
+  // - Operates only on the current authenticated user's profile (user.$id).
+  // - Validates the value against the canonical specialization list.
+  // - Updates ONLY the specialization field; protected fields (isAdmin,
+  //   isVerified, profileStatus, other users' docs) are never touched.
+  static async updateUserSpecialization(specialization: string | null) {
+    try {
+      const user = await account.get();
+      if (!user.$id) {
+        return { success: false, error: 'No authenticated user' };
+      }
+
+      // Allow clearing (null) or a value from the canonical list only.
+      if (specialization !== null && !AuthService.ALLOWED_SPECIALIZATIONS.includes(specialization)) {
+        return { success: false, error: 'Invalid specialization value' };
+      }
+
+      await databases.updateDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.usersCollectionId,
+        user.$id,
+        { specialization }
+      );
+
+      return { success: true };
+    } catch (error: any) {
+      console.error('Update user specialization error:', error);
+      return { success: false, error: error.message };
+    }
   }
 
   // Ensure profile exists
@@ -436,8 +539,8 @@ export class HighlightsService {
     }
   }
 
-  // Get approved highlights for public display
-  static async getApprovedHighlights() {
+  // Get approved highlights for public display (newest first, bounded).
+  static async getApprovedHighlights(limit = 3) {
     try {
       const result = await databases.listDocuments(
         APPWRITE_CONFIG.databaseId,
@@ -445,7 +548,7 @@ export class HighlightsService {
         [
           Query.equal('status', 'approved'),
           Query.orderDesc('createdAt'),
-          Query.limit(50)
+          Query.limit(Math.max(1, Math.min(limit, 50)))
         ]
       );
       return { success: true, highlights: result.documents as StudentHighlight[] };
@@ -685,6 +788,30 @@ export class MaterialService {
     }
   }
 
+  // Get recent materials for a level + semester, newest first. Intended for the
+  // Dashboard Home "Recent Materials" preview. Kept narrowly scoped: filters by
+  // level and semester, orders by uploadedDate desc, and uses an efficient
+  // limit. Course/specialization relevance is applied client-side by the caller
+  // using the student's already-filtered course codes.
+  static async getRecentMaterials(level: number, semester: number, limit = 3) {
+    try {
+      const result = await databases.listDocuments(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.materialsCollectionId,
+        [
+          Query.equal('level', level),
+          Query.equal('semester', semester),
+          Query.orderDesc('uploadedDate'),
+          Query.limit(limit * 5),
+        ]
+      );
+      return { success: true, materials: result.documents as CourseMaterial[] };
+    } catch (error: any) {
+      console.error('Get recent materials error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
   // Get all materials (for admin dashboard)
   static async getAllMaterials() {
     try {
@@ -775,6 +902,169 @@ export class CourseService {
       return { success: true };
     } catch (error: any) {
       console.error('Delete course error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+}
+
+// Notice admin functions
+export class NoticeService {
+  // Resolve the safest author name for a notice.
+  // Preferred order: profile name -> Appwrite account name -> fallback.
+  static resolveAuthorName(user: any, userProfile: StudentUser | null): string {
+    const name = userProfile?.name || user?.name;
+    return (name && name.trim()) || 'IAAS-UG Admin';
+  }
+
+  // Get all notices, newest-created first. Admins only (Appwrite enforces).
+  static async getAllNotices(limit = 100) {
+    try {
+      const result = await databases.listDocuments(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        [Query.orderDesc('createdAt'), Query.limit(limit)]
+      );
+      return { success: true, notices: result.documents as Notice[] };
+    } catch (error: any) {
+      console.error('Get all notices error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Student-facing read: published notices, newest-published first.
+  // Audience + expiry filtering is applied client-side by the caller
+  // (Appwrite queries cannot OR multiple audience values and cannot filter
+  // "is null or greater than now" cleanly). Bounded limit keeps historical
+  // archive fetches small. Never returns draft/archived records.
+  static async getPublishedNotices(limit = 100) {
+    try {
+      const result = await databases.listDocuments(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        [Query.equal('status', 'published'), Query.orderDesc('publishedAt'), Query.limit(limit)]
+      );
+      return { success: true, notices: result.documents as Notice[] };
+    } catch (error: any) {
+      console.error('Get published notices error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Create a notice. System-managed fields (createdAt, updatedAt, authorName,
+  // publishedAt) are generated here; the UI must not supply them.
+  static async createNotice(
+    input: CreateNoticeInput,
+    authorName: string
+  ) {
+    try {
+      const now = new Date().toISOString();
+      const data: Record<string, unknown> = {
+        title: input.title,
+        summary: input.summary,
+        content: input.content,
+        category: input.category,
+        status: input.status,
+        priority: input.priority,
+        audience: input.audience,
+        authorName,
+        createdAt: now,
+        updatedAt: now,
+        // Publishing a brand-new notice sets publishedAt; otherwise it is null.
+        publishedAt: input.status === 'published' ? now : null,
+        expiresAt: input.expiresAt || null,
+      };
+
+      const notice = await databases.createDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        ID.unique(),
+        data
+      );
+      return { success: true, notice: notice as Notice };
+    } catch (error: any) {
+      console.error('Create notice error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Edit editable fields of an existing notice. Always bumps updatedAt.
+  // Status is NOT changed here — status transitions use updateNoticeStatus.
+  static async updateNotice(noticeId: string, input: UpdateNoticeInput) {
+    try {
+      const data: Record<string, unknown> = {
+        title: input.title,
+        summary: input.summary,
+        content: input.content,
+        category: input.category,
+        priority: input.priority,
+        audience: input.audience,
+        updatedAt: new Date().toISOString(),
+        expiresAt: input.expiresAt || null,
+      };
+
+      const notice = await databases.updateDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        noticeId,
+        data
+      );
+      return { success: true, notice: notice as Notice };
+    } catch (error: any) {
+      console.error('Update notice error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Dedicated status transition method. Keeps publishedAt rules consistent.
+  //  - draft -> published: sets publishedAt = now
+  //  - published -> draft: clears publishedAt = null
+  //  - -> archived: preserves historical publishedAt when previously published
+  static async updateNoticeStatus(
+    noticeId: string,
+    status: NoticeStatus,
+    currentPublishedAt?: string | null
+  ) {
+    try {
+      const now = new Date().toISOString();
+      const data: Record<string, unknown> = {
+        status,
+        updatedAt: now,
+      };
+
+      if (status === 'published') {
+        data.publishedAt = now;
+      } else if (status === 'draft') {
+        // Explicit unpublish: clear the publication timestamp.
+        data.publishedAt = null;
+      } else if (status === 'archived') {
+        // Preserve historical publishedAt if the notice was previously published.
+        data.publishedAt = currentPublishedAt || null;
+      }
+
+      const notice = await databases.updateDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        noticeId,
+        data
+      );
+      return { success: true, notice: notice as Notice };
+    } catch (error: any) {
+      console.error('Update notice status error:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  // Delete a notice by its Appwrite document ID. Admins only.
+  static async deleteNotice(noticeId: string) {
+    try {
+      await databases.deleteDocument(
+        APPWRITE_CONFIG.databaseId,
+        APPWRITE_CONFIG.noticesCollectionId,
+        noticeId
+      );
+      return { success: true };
+    } catch (error: any) {
+      console.error('Delete notice error:', error);
       return { success: false, error: error.message };
     }
   }

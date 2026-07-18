@@ -46,6 +46,36 @@ body,
         background: #00592d;
     }
 
+    /* Student Highlights carousel: accessible focus + comfortable tap targets */
+    .student-highlights-swiper .swiper-pagination-bullet {
+        background: #9ca3af;
+        opacity: 1;
+    }
+
+    .student-highlights-swiper .swiper-pagination-bullet-active {
+        background: #00592d;
+    }
+
+    .student-highlights-swiper .swiper-button-prev,
+    .student-highlights-swiper .swiper-button-next {
+        width: 28px;
+        height: 28px;
+    }
+
+    .student-highlights-swiper .swiper-button-prev::after,
+    .student-highlights-swiper .swiper-button-next::after {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .student-highlights-swiper .swiper-button-prev:focus-visible,
+    .student-highlights-swiper .swiper-button-next:focus-visible,
+    .student-highlights-swiper .swiper-pagination-bullet:focus-visible {
+        outline: 2px solid #00592d;
+        outline-offset: 2px;
+        border-radius: 9999px;
+    }
+
     .hero-title {
         color: #f7f6f1;
         text-wrap: balance;
@@ -338,4 +368,79 @@ body,
 
 .animate-slideIn {
     animation: slideIn 0.3s ease-out;
+}
+
+/* Rich text notice content (admin editor output + student rendering).
+   On-brand deep-green text with restrained, readable typographic rhythm. */
+.rich-notice-content {
+    color: #1e4620;
+}
+
+.rich-notice-content p {
+    margin: 0 0 0.75rem;
+}
+
+.rich-notice-content p:last-child {
+    margin-bottom: 0;
+}
+
+.rich-notice-content h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #004620;
+    margin: 1.1rem 0 0.5rem;
+}
+
+.rich-notice-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #004620;
+    margin: 1rem 0 0.5rem;
+}
+
+.rich-notice-content h2:first-child,
+.rich-notice-content h3:first-child {
+    margin-top: 0;
+}
+
+.rich-notice-content ul,
+.rich-notice-content ol {
+    margin: 0 0 0.75rem;
+    padding-left: 1.4rem;
+}
+
+.rich-notice-content ul {
+    list-style: disc;
+}
+
+.rich-notice-content ol {
+    list-style: decimal;
+}
+
+.rich-notice-content li {
+    margin: 0.25rem 0;
+}
+
+.rich-notice-content blockquote {
+    border-left: 3px solid #f2a900;
+    padding-left: 0.85rem;
+    margin: 0.75rem 0;
+    color: #8a6100;
+    font-style: italic;
+}
+
+.rich-notice-content a {
+    color: #00592d;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.rich-notice-content a:hover {
+    color: #d98a00;
+}
+
+.rich-notice-content strong,
+.rich-notice-content b {
+    font-weight: 700;
+    color: #004620;
 }
