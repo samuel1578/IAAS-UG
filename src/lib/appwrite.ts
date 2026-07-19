@@ -137,6 +137,14 @@ export class AuthService {
         userData.name
       );
 
+      // Establish an authenticated session for the new account BEFORE creating
+      // the profile document. The profile document grants owner-level
+      // (Role.user) permissions, which Appwrite only accepts once an active
+      // session exists for that account — otherwise the request is treated as a
+      // guest and rejects the permissions with "Permissions must be one of:
+      // (any, guests)".
+      await account.createEmailPasswordSession(userData.email, userData.password);
+
       // Create user profile in database (fail fast if profile cannot be created)
       try {
         await databases.createDocument(
@@ -177,8 +185,8 @@ export class AuthService {
         throw new Error(`Profile creation failed: ${profileError.message}. Please try again with correct data.`);
       }
 
-      // Auto login after signup
-      await account.createEmailPasswordSession(userData.email, userData.password);
+      // A session is already established above (post account.create), so no
+      // further sign-in is required here.
 
       return { success: true, user };
     } catch (error: any) {
