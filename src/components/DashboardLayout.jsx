@@ -43,7 +43,18 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
-  const { user, isAdmin } = useAuth();
+  const { user, isAdmin, signOut } = useAuth();
+
+  // Delegates to the existing sign-out handler (same one LogoutRoute uses),
+  // then routes to home. No new sign-out logic is introduced here.
+  const handleLogout = async () => {
+    setShowMoreMenu(false);
+    try {
+      await signOut();
+    } finally {
+      navigate('/');
+    }
+  };
   const { temperature, humidity, description, isLoading, error, lastUpdated } = useWeather();
   const navigate = useNavigate();
 
@@ -102,11 +113,11 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
 
   const mobilePrimaryTabs = isAdmin
     ? menuItems.slice(0, 3)
-    : menuItems.filter((item) => ['home', 'academic', 'noticeboard', 'logbook'].includes(item.id));
+    : menuItems.filter((item) => ['home', 'academic', 'noticeboard'].includes(item.id));
 
   const mobileOverflowTabs = isAdmin
     ? menuItems.slice(3)
-    : menuItems.filter((item) => !['home', 'academic', 'noticeboard', 'logbook'].includes(item.id));
+    : menuItems.filter((item) => !['home', 'academic', 'noticeboard'].includes(item.id));
 
   return (
     <div className="min-h-screen bg-[#F8F9FA] lg:bg-transparent">
@@ -249,12 +260,6 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
       <div className="fixed top-0 left-0 right-0 bg-white border-b border-gray-200 z-30 shadow-sm lg:hidden">
         <div className="flex items-center justify-between px-3 md:px-6 py-3 md:py-4 gap-3">
           <button
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          >
-            {sidebarOpen ? <MdClose className="w-6 h-6" /> : <MdMenu className="w-6 h-6" />}
-          </button>
-          <button
             onClick={() => navigate('/')}
             className="flex items-center gap-2 flex-1 min-w-0 hover:opacity-80 transition-opacity"
           >
@@ -362,6 +367,7 @@ const DashboardLayout = ({ level, activeModule, setActiveModule, children }) => 
         items={mobileOverflowTabs}
         activeModule={activeModule}
         setActiveModule={setActiveModule}
+        onLogout={handleLogout}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdLogout } from 'react-icons/md';
 
-const BottomTabMoreMenu = ({ isOpen, onClose, items, activeModule, setActiveModule }) => {
+const BottomTabMoreMenu = ({ isOpen, onClose, items, activeModule, setActiveModule, onLogout }) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -59,6 +59,22 @@ const BottomTabMoreMenu = ({ isOpen, onClose, items, activeModule, setActiveModu
                 );
               })}
             </div>
+
+            {onLogout && (
+              <>
+                <div className="mx-4 my-2 border-t border-gray-200" />
+                <div className="px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
+                  <button
+                    type="button"
+                    onClick={onLogout}
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors bg-gray-50 text-red-600 hover:bg-red-50"
+                  >
+                    <MdLogout className="w-5 h-5" />
+                    <span className="font-medium">Logout</span>
+                  </button>
+                </div>
+              </>
+            )}
           </motion.div>
         </>
       )}

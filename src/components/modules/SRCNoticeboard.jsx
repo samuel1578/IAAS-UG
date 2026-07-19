@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdNotifications, MdAccessTime, MdCampaign } from 'react-icons/md';
 import Card from '../Card';
-import SkeletonCard from '../skeletons/SkeletonCard';
 import NoticeDetailModal from './NoticeDetailModal';
 import {
   CATEGORY_LABELS,
@@ -19,27 +18,28 @@ import { useAuth } from '../../contexts/AuthContext';
 const SRCNoticeboard = () => {
   const { userProfile } = useAuth();
   const [notices, setNotices] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [selected, setSelected] = useState(null);
 
   const studentAudience = levelToAudience(userProfile ? userProfile.level : null);
   const now = Date.now();
 
   const loadNotices = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-    const result = await NoticeService.getPublishedNotices(100);
-    if (!result.success) {
-      setError("We couldn't load notices right now.");
+    try {
+      const result = await NoticeService.getPublishedNotices(100);
+      if (!result.success) {
+        console.error('SRC Noticeboard fetch failed:', result.error);
+        setNotices([]);
+        return;
+      }
+      // Audience + expiry filtering via the shared helper; newest-published-first
+      // order is preserved from the service query.
+      setNotices(filterEligibleNotices(result.notices, studentAudience, now));
+    } catch (err) {
+      // Log the real failure; the empty-state message covers both zero
+      // results and fetch failures, so no separate error UI is rendered.
+      console.error('SRC Noticeboard load error:', err);
       setNotices([]);
-      setIsLoading(false);
-      return;
     }
-    // Audience + expiry filtering via the shared helper; newest-published-first
-    // order is preserved from the service query.
-    setNotices(filterEligibleNotices(result.notices, studentAudience, now));
-    setIsLoading(false);
   }, [studentAudience, now]);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const SRCNoticeboard = () => {
           <h2 className="text-3xl font-bold text-[#00592D] mb-2">SRC Noticeboard</h2>
           <p className="text-gray-600">Stay updated with the latest announcements and events</p>
         </div>
-        {!isLoading && !error && notices.length > 0 && (
+        {notices.length > 0 && (
           <button
             type="button"
             onClick={loadNotices}
@@ -64,38 +64,14 @@ const SRCNoticeboard = () => {
         )}
       </div>
 
-      {isLoading && (
-        <div className="space-y-4" aria-busy="true" aria-label="Loading notices">
-          <SkeletonCard lines={2} />
-          <SkeletonCard lines={2} />
-          <SkeletonCard lines={2} />
-        </div>
-      )}
-
-      {!isLoading && error && (
-        <div className="bg-white rounded-xl shadow-md border border-[#E5E7EB] p-8 text-center">
-          <p className="text-gray-700 mb-4">{error}</p>
-          <button
-            type="button"
-            onClick={loadNotices}
-            className="px-4 py-2 rounded-lg bg-[#00592D] text-white font-medium hover:bg-[#004721] transition-colors"
-          >
-            Try Again
-          </button>
-        </div>
-      )}
-
-      {!isLoading && !error && notices.length === 0 && (
+      {notices.length === 0 && (
         <div className="bg-white rounded-xl shadow-md border border-[#E5E7EB] p-8 text-center">
           <MdNotifications className="w-10 h-10 text-[#00592D] mx-auto mb-3" />
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">No notices right now</h3>
-          <p className="text-gray-600">
-            New academic and SRC updates will appear here when published.
-          </p>
+          <h3 className="text-lg font-semibold text-gray-800 mb-1">No student notices at this time.</h3>
         </div>
       )}
 
-      {!isLoading && !error && notices.length > 0 && (
+      {notices.length > 0 && (
         <motion.div
           initial="hidden"
           animate="visible"
