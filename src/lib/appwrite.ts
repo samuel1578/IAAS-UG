@@ -113,6 +113,18 @@ export interface UpdateNoticeInput {
 
 // Authentication functions
 export class AuthService {
+  // Delete any currently active session so a fresh session can be created
+  // without tripping Appwrite's "session is active" error. Safe to call when
+  // no session exists — failures are swallowed (there was simply nothing to
+  // delete). Shared by signIn and signUp.
+  private static async clearExistingSession() {
+    try {
+      await account.deleteSession('current');
+    } catch {
+      // No existing session, continue
+    }
+  }
+
   // Sign up new user
   static async signUp(userData: {
     email: string;
@@ -143,6 +155,9 @@ export class AuthService {
       // session exists for that account — otherwise the request is treated as a
       // guest and rejects the permissions with "Permissions must be one of:
       // (any, guests)".
+      // Clear any pre-existing session first to avoid "Creation of a session is
+      // prohibited when a session is active".
+      await AuthService.clearExistingSession();
       await account.createEmailPasswordSession(userData.email, userData.password);
 
       // Create user profile in database (fail fast if profile cannot be created)
@@ -209,11 +224,7 @@ export class AuthService {
   static async signIn(email: string, password: string) {
     try {
       // Check and delete existing session to prevent "session is active" error
-      try {
-        await account.deleteSession('current');
-      } catch {
-        // No existing session, continue
-      }
+      await AuthService.clearExistingSession();
 
       // Now create new session
       await account.createEmailPasswordSession(email, password);

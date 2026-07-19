@@ -29,6 +29,31 @@ function ProtectedRoute({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
 
+// Inverse of ProtectedRoute: if a valid session already exists, bounce the user
+// straight to the dashboard instead of showing the auth form. Reuses the same
+// auth-state source (useAuth) as ProtectedRoute — no extra network round-trip
+// when the context already holds the user.
+function RedirectIfAuthed({ children }: { children: React.ReactNode }) {
+  const { isAuthenticated, isLoading, userProfile } = useAuth();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#F8F9FA] flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-8 h-8 border-4 border-[#00592D] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (isAuthenticated) {
+    return <Navigate to={`/dashboard/${userProfile?.level || 100}`} replace />;
+  }
+
+  return <>{children}</>;
+}
+
 function AnimatedRoutes() {
   const location = useLocation();
 
@@ -41,7 +66,11 @@ function AnimatedRoutes() {
         />
         <Route
           path="/auth"
-          element={<AuthPage />}
+          element={
+            <RedirectIfAuthed>
+              <AuthPage />
+            </RedirectIfAuthed>
+          }
         />
         <Route
           path="/logout"

@@ -5,6 +5,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { MdArrowBack, MdVisibility, MdVisibilityOff } from 'react-icons/md';
 import Skeleton from '../components/skeletons/Skeleton';
 import SkeletonText from '../components/skeletons/SkeletonText';
+import Toast from '../components/Toast';
 import ugLogo from '../assets/uglogo.png';
 import agricLogo from '../assets/lln.jpeg';
 import desktopHero from '../assets/newhor.jpg';
@@ -14,6 +15,7 @@ const AuthPage = () => {
   const [signupPhase, setSignupPhase] = useState(1);
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showSuccessToast, setShowSuccessToast] = useState(false);
   const [formData, setFormData] = useState({
     // Phase 1: Personal Information
     name: '',
@@ -90,7 +92,7 @@ const AuthPage = () => {
 
       const result = await signUp(signupData);
       if (result.success) {
-        alert('Registration successful! Please wait for admin approval before you can access the dashboard.');
+        setShowSuccessToast(true);
         navigate('/');
       } else {
         alert(result.error || 'Registration failed');
@@ -137,6 +139,11 @@ const AuthPage = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden">
+      <Toast
+        message={showSuccessToast ? 'Registration successful! Please wait for admin approval before you can access the dashboard.' : ''}
+        onClose={() => setShowSuccessToast(false)}
+      />
+
       {/* Background */}
       <motion.div
         aria-hidden="true"
